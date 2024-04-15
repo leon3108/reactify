@@ -13,9 +13,6 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
-      // screens: {
-      //   "2xl": "1400px",
-      // },
     },
     extend: {
       colors: {
@@ -51,6 +48,9 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        "gray": {
+          500: "#a7a6a7",
         },
       },
       borderRadius: {

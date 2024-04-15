@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@/components/theme-provider'
-import NavBar from '@/components/ui/navBar'
+import Footer from '@/components/ui/footer/footer'
+import NavBar from '@/components/ui/navbar/navbar'
 import {
   ResizableHandle,
   ResizablePanel,
@@ -30,11 +31,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ResizablePanelGroup direction="horizontal">
-            <NavBar />
-            <ResizableHandle />
-            <ResizablePanel>{children}</ResizablePanel>
-          </ResizablePanelGroup>
+          <div className="flex flex-col h-screen bg-background">
+            <ResizablePanelGroup direction="horizontal" className="h-max">
+              <NavBar />
+              <ResizableHandle className="bg-background" />
+              <ResizablePanel>{children}</ResizablePanel>
+            </ResizablePanelGroup>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
