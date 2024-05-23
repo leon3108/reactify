@@ -16,6 +16,7 @@ const config = {
     },
     extend: {
       colors: {
+        spotify: "#1db954",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
