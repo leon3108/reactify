@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex h-full w-full flex-col space-y-4 p-5">
       <Navbar />
       <Filter />
-      <ScrollArea >
+      <ScrollArea>
         <GoodMorning />
         <Recommendations />
       </ScrollArea>
