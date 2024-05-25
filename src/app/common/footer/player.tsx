@@ -1,5 +1,6 @@
 'use client'
 
+import { Slider } from '@/ui/slider'
 import {
   CirclePause,
   CirclePlay,
@@ -9,7 +10,6 @@ import {
   SkipForward,
 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { Slider } from '../slider'
 
 export default function Player() {
   const [currentTime, setCurrentTime] = useState(0)

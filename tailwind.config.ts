@@ -16,6 +16,12 @@ const config = {
     },
     extend: {
       colors: {
+        badge: "#232222",
+        base: "#121212",
+        grey: {
+          500: "#838283"
+        },
+        subdued: "#a7a7a7",
         spotify: "#1db954",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

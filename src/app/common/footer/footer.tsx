@@ -1,6 +1,6 @@
 import { CircleCheck, Volume2 } from 'lucide-react'
 import Image from 'next/image'
-import { Slider } from '../slider'
+import { Slider } from '@/ui/slider'
 import Player from './player'
 import yourEpisodes from '/public/yourEpisodes.png'
 

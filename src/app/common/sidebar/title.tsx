@@ -1,12 +1,12 @@
-import { Library, Music, Plus } from 'lucide-react'
-import { MutableRefObject } from 'react'
-import { ImperativePanelHandle } from 'react-resizable-panels'
 import {
   ContextMenu,
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuTrigger,
-} from '../context-menu'
+} from '@/ui/context-menu'
+import { Library, Music, Plus } from 'lucide-react'
+import { MutableRefObject } from 'react'
+import { ImperativePanelHandle } from 'react-resizable-panels'
 import { MIN_PANEL_SIZE, SIZE_WITHOUT_ICON } from './const'
 
 export default function Title({
@@ -29,16 +29,16 @@ export default function Title({
   }
 
   return (
-    <div className="flex justify-between my-2">
+    <div className="my-2 flex justify-between">
       <ContextMenu>
         <ContextMenuTrigger
           className="flex hover:cursor-pointer"
           onClick={handleClickContextMenu}
         >
-          <Library />
+          <Library className='stroke-grey-500'/>
           {panelRef.current &&
           panelRef.current.getSize() > SIZE_WITHOUT_ICON ? (
-            <p className="font-bold">Your library</p>
+            <p className="font-bold text-grey-500">Your library</p>
           ) : null}
         </ContextMenuTrigger>
         <ContextMenuContent className="w-48">
@@ -54,7 +54,7 @@ export default function Title({
       </ContextMenu>
       {panelRef.current && panelRef.current.getSize() > SIZE_WITHOUT_ICON ? (
         <div className="flex space-x-4">
-          <Plus />
+          <Plus className='stroke-grey-500'/>
           {arrow}
         </div>
       ) : null}

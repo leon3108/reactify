@@ -1,6 +1,6 @@
 import { MutableRefObject } from 'react'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { Card, CardContent } from '../card'
+import { Card, CardContent } from '@/ui/card'
 import FilterByType from './filter-by-type'
 import LibraryList from './library-list'
 import SearchinMyLib from './search-in-my-lib'
@@ -17,7 +17,7 @@ export default function YourLibrary({
   arrow: React.ReactNode
 }) {
   return (
-    <Card className="h-full">
+    <Card className="h-full bg-base">
       <CardContent>
         <Title panelRef={panelRef} navbarSize={navbarSize} arrow={arrow} />
         <FilterByType panelRef={panelRef} />

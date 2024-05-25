@@ -1,8 +1,8 @@
+import { Card, CardContent } from '@/ui/card'
 import { Home, Search } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { Card, CardContent } from '../card'
 import { SIZE_WITHOUT_ICON, TEXT_GRAY_500 } from './const'
 
 export default function Menu({
@@ -13,7 +13,7 @@ export default function Menu({
   const pathname = usePathname()
 
   return (
-    <Card>
+    <Card className='bg-base'>
       <CardContent className="mt-2 space-y-2">
         <div className="flex space-x-2">
           <Home

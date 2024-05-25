@@ -1,11 +1,11 @@
-import { ThemeProvider } from '@/components/theme-provider'
-import Footer from '@/components/ui/footer/footer'
-import NavBar from '@/components/ui/navbar/navbar'
+import { ThemeProvider } from '@/app/theme-provider'
+import Footer from '@/app/common/footer/footer'
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from '@/components/ui/resizable'
+} from '@/ui/resizable'
+import SideBar from '@/app/common/sidebar/sidebar'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -31,9 +31,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col h-screen bg-background">
+          <div className="flex h-screen flex-col bg-background">
             <ResizablePanelGroup direction="horizontal" className="h-max">
-              <NavBar />
+              <SideBar />
               <ResizableHandle className="bg-background" />
               <ResizablePanel>{children}</ResizablePanel>
             </ResizablePanelGroup>

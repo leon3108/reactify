@@ -1,6 +1,6 @@
 'use client'
 
-import { ResizablePanel } from '@/components/ui/resizable'
+import { ResizablePanel } from '@/ui/resizable'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { ImperativePanelHandle } from 'react-resizable-panels'
@@ -8,13 +8,13 @@ import { MIN_PANEL_SIZE } from './const'
 import Menu from './menu'
 import YourLibrary from './your-library'
 
-export default function Navbar() {
+export default function Sidebar() {
   const [arrow, setArrow] = useState<React.ReactNode>(<MoveRight />)
   const panelRef = useRef<ImperativePanelHandle>(null)
-  const navbarSize = useRef(35)
+  const navbarSize = useRef(20)
 
   const handleResize = (size: number) => {
-    size >= 35 ? setArrow(<MoveLeft />) : setArrow(<MoveRight />)
+    size >= 35 ? setArrow(<MoveLeft className='stroke-grey-500'/>) : setArrow(<MoveRight className='stroke-grey-500'/>)
   }
 
   return (
