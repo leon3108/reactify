@@ -3,7 +3,7 @@ import { Home, Search } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { ICON_SIZE, SIZE_WITHOUT_ICON, TEXT_GRAY_500 } from './const'
+import { ICON_SIZE, PANEL_SIZE, TEXT_GRAY_500 } from './const'
 
 export default function Menu({
   panelRef,
@@ -24,8 +24,7 @@ export default function Menu({
             className="hover:cursor-pointer"
             color={pathname == '/' ? 'white' : TEXT_GRAY_500}
           />
-          {panelRef.current &&
-          panelRef.current.getSize() > SIZE_WITHOUT_ICON ? (
+          {panelRef.current && panelRef.current.getSize() > PANEL_SIZE.min ? (
             <p>Home</p>
           ) : null}
         </Link>
@@ -38,8 +37,7 @@ export default function Menu({
             className="hover:cursor-pointer"
             color={pathname == '/search' ? 'white' : TEXT_GRAY_500}
           />
-          {panelRef.current &&
-          panelRef.current.getSize() > SIZE_WITHOUT_ICON ? (
+          {panelRef.current && panelRef.current.getSize() > PANEL_SIZE.min ? (
             <p>Search</p>
           ) : null}
         </Link>
