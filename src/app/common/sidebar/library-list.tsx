@@ -11,6 +11,7 @@ import Image, { StaticImageData } from 'next/image'
 import { ImperativePanelHandle } from 'react-resizable-panels'
 import likedSongs from '/public/liked-songs-300.png'
 import yourEpisodes from '/public/yourEpisodes.png'
+import { PANEL_SIZE } from './const'
 
 const list = [
   {
@@ -69,8 +70,6 @@ const list = [
   },
 ]
 
-const limitSize = 10
-
 function LibraryElement({
   src,
   title,
@@ -89,29 +88,29 @@ function LibraryElement({
       <ContextMenuTrigger
         className={cn(
           'flex space-x-2 rounded-lg p-2 hover:bg-[#1a1a1a]',
-          panelRef.current?.getSize()! > limitSize ? '' : 'justify-center',
+          panelRef.current?.getSize()! > PANEL_SIZE.small ? '' : 'justify-center',
         )}
       >
         <Image
           src={src}
           alt="likedSongs"
-          width={50}
-          height={50}
+          width={48}
+          height={48}
           className={cn(
             'rounded-md ',
-            panelRef.current?.getSize()! > limitSize ? '' : 'h-12 w-12',
+            panelRef.current?.getSize()! > PANEL_SIZE.small ? '' : 'h-12 w-12',
           )}
         />
         <div
           className={cn(
             'flex flex-col',
-            panelRef.current?.getSize()! > limitSize ? '' : 'hidden',
+            panelRef.current?.getSize()! > PANEL_SIZE.small ? '' : 'hidden',
           )}
         >
           <p>{title}</p>
           <div className="flex">
             {isPinned && <Pin className=" fill-spotify stroke-spotify" />}
-            <p className="truncate">{type}</p>
+            <p className="truncate text-subdued text-sm">{type}</p>
           </div>
         </div>
       </ContextMenuTrigger>

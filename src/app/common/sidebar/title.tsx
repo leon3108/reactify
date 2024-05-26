@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import {
   ContextMenu,
   ContextMenuContent,
@@ -6,7 +7,7 @@ import {
 } from '@/ui/context-menu'
 import { Library, Music, Plus } from 'lucide-react'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { MIN_PANEL_SIZE, SIZE_WITHOUT_ICON } from './const'
+import { ICON_SIZE, PANEL_SIZE } from './const'
 
 export default function Title({
   panelRef,
@@ -17,25 +18,31 @@ export default function Title({
 }) {
   const handleClickContextMenu = () => {
     if (!panelRef.current) return
-    if (panelRef.current.getSize() === MIN_PANEL_SIZE) {
+    if (panelRef.current.getSize() === PANEL_SIZE.min) {
       panelRef.current.resize(20)
     } else {
-      panelRef.current.resize(MIN_PANEL_SIZE)
+      panelRef.current.resize(PANEL_SIZE.min)
     }
   }
 
+  const showText = panelRef.current?.getSize()! > PANEL_SIZE.min
+
   return (
-    <div className="my-2 flex justify-between">
+    <div
+      className={cn(
+        'my-2 flex justify-between',
+        panelRef.current?.getSize()! <= PANEL_SIZE.min
+          ? 'w-full items-center justify-center'
+          : '',
+      )}
+    >
       <ContextMenu>
         <ContextMenuTrigger
           className="flex hover:cursor-pointer"
           onClick={handleClickContextMenu}
         >
-          <Library className="stroke-grey-500" />
-          {panelRef.current &&
-          panelRef.current.getSize() > SIZE_WITHOUT_ICON ? (
-            <p className="font-bold text-grey-500">Your library</p>
-          ) : null}
+          <Library className="stroke-grey-500" size={ICON_SIZE} />
+          {showText && <p className="font-bold text-grey-500">Your library</p>}
         </ContextMenuTrigger>
         <ContextMenuContent className="w-48">
           <ContextMenuItem inset className="space-x-3">
@@ -48,7 +55,7 @@ export default function Title({
           </ContextMenuItem>
         </ContextMenuContent>
       </ContextMenu>
-      {panelRef.current && panelRef.current.getSize() > SIZE_WITHOUT_ICON ? (
+      {showText ? (
         <div className="flex space-x-4">
           <Plus className="stroke-grey-500" />
           {arrow}

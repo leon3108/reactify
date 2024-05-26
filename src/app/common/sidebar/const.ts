@@ -1,4 +1,14 @@
-export const MIN_PANEL_SIZE = 5
-export const MAX_PANEL_SIZE = 80
-export const SIZE_WITHOUT_ICON = 10
+// Panel Size
+export const PANEL_SIZE = {
+  min : 4,
+  small: 10,
+  medium: 15,
+  max : 80,
+}
+
+// Icon
+export const ICON_SIZE = 24
+
+
+// Color
 export const TEXT_GRAY_500 = '#a7a6a7'

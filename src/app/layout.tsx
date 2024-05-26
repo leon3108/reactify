@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="flex h-screen flex-col bg-background">
             <ResizablePanelGroup direction="horizontal" className="h-max">
               <SideBar />
-              <ResizableHandle className="bg-background" />
+              <ResizableHandle className="bg-background w-2" />
               <ResizablePanel>{children}</ResizablePanel>
             </ResizablePanelGroup>
             <Footer />

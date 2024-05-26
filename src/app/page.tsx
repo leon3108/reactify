@@ -6,13 +6,15 @@ import Recommendations from './components/recommendations'
 
 export default function Home() {
   return (
-    <main className="flex h-full w-full flex-col space-y-4 p-5">
-      <Navbar />
-      <Filter />
-      <ScrollArea>
-        <GoodMorning />
-        <Recommendations />
-      </ScrollArea>
+    <main className="h-full w-full">
+      <div className="mt-2 flex h-full w-full flex-col space-y-4 rounded-lg bg-base p-5 mr-2">
+        <Navbar />
+        <Filter />
+        <ScrollArea>
+          <GoodMorning />
+          <Recommendations />
+        </ScrollArea>
+      </div>
     </main>
   )
 }
