@@ -30,7 +30,7 @@ export default function Title({
   return (
     <div
       className={cn(
-        'my-2 flex justify-between',
+        'flex justify-between',
         panelRef.current?.getSize()! <= PANEL_SIZE.min
           ? 'w-full items-center justify-center'
           : '',
@@ -38,7 +38,7 @@ export default function Title({
     >
       <ContextMenu>
         <ContextMenuTrigger
-          className="flex hover:cursor-pointer"
+          className="my-4 flex hover:cursor-pointer"
           onClick={handleClickContextMenu}
         >
           <Library className="stroke-grey-500" size={ICON_SIZE} />
@@ -56,7 +56,7 @@ export default function Title({
         </ContextMenuContent>
       </ContextMenu>
       {showText ? (
-        <div className="flex space-x-4">
+        <div className="flex items-center space-x-4">
           <Plus className="stroke-grey-500" />
           {arrow}
         </div>

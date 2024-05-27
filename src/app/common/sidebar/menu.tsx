@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { Card, CardContent } from '@/ui/card'
 import { Home, Search } from 'lucide-react'
 import Link from 'next/link'
@@ -13,8 +14,20 @@ export default function Menu({
   const pathname = usePathname()
 
   return (
-    <Card className="bg-base">
-      <CardContent className="mt-2 space-y-2">
+    <Card
+      className={cn(
+        'h-28 bg-base ',
+        panelRef.current?.getSize() == PANEL_SIZE.min
+          ? 'items-center justify-between'
+          : '',
+      )}
+    >
+      <CardContent
+        className={cn(
+          'mt-2 flex flex-col justify-evenly h-full',
+          panelRef.current?.getSize() == PANEL_SIZE.min ? 'items-center ' : '',
+        )}
+      >
         <Link
           href="/"
           className={`${pathname == '/' ? 'text-white ' : 'text-gray-500 '} flex space-x-2 font-bold`}

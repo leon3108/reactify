@@ -19,6 +19,7 @@ export default function YourLibrary({
     <Card className="h-full bg-base">
       <CardContent
         className={cn(
+          'space-y-2',
           panelRef.current?.getSize()! <= PANEL_SIZE.min ? 'p-0' : '',
         )}
       >
