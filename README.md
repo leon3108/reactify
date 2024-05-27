@@ -1,3 +1,8 @@
+# ULTRA IMPORTANT 
+
+il faut enelever le ```display:table``` dans ```node_modules/@radix-ui/react-scroll-area/dist/index.js``` et ```/home/leon/work/spotiflex/node_modules/@radix-ui/react-scroll-area/dist/index.mjs```
+
+
 # BoirlerPlateWEB2024
 
 ## Stack

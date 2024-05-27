@@ -3,7 +3,7 @@ export const PANEL_SIZE = {
   min : 4,
   small: 10,
   medium: 15,
-  max : 80,
+  max : 78,
 }
 
 // Icon

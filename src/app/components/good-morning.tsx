@@ -62,7 +62,11 @@ function GridElement({
 
 export default function GoodMorning() {
   return (
-    <section className={cn('grid grid-cols-4 grid-rows-2 gap-4')}>
+    <section
+      className={cn(
+        'grid gap-4 @xs:grid-cols-2 @xs:grid-rows-4 @6xl:grid-cols-4 @6xl:grid-rows-2',
+      )}
+    >
       {list.map((item) => (
         <GridElement title={item.title} src={item.src} key={item.title} />
       ))}
