@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/ui/button'
 import {
   Card,
@@ -7,6 +9,8 @@ import {
   CardTitle,
 } from '@/ui/card'
 import Image, { StaticImageData } from 'next/image'
+import { useContext } from 'react'
+import { CurrentSongContext } from '../common/context/current-song'
 import likedSongs from '/public/liked-songs-300.png'
 
 const lists = [
@@ -14,37 +18,37 @@ const lists = [
     name: 'Made for Leon',
     elements: [
       {
-        src: "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb34925ec32cd90699e1021914/1/en/default",
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb34925ec32cd90699e1021914/1/en/default',
         title: 'Daily Mix 1',
         description: 'B.B Jacques, Népal, Lujipeka and more',
         artist: '',
       },
       {
-        src: "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb92f66833fe2a9a854f888042/2/en/default",
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb92f66833fe2a9a854f888042/2/en/default',
         title: 'Daily Mix 2',
         description: 'Laylow, Luidji, Zinée and more',
         artist: '',
       },
       {
-        src: "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb2b550c4ab38ac680700abc42/3/en/default",
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb2b550c4ab38ac680700abc42/3/en/default',
         title: 'Daily Mix 3',
         description: 'Malo, Jwles, Luther and more',
         artist: '',
       },
       {
-        src: "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb976140e777ab37c7f262a910/4/en/default",
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb976140e777ab37c7f262a910/4/en/default',
         title: 'Daily Mix 4',
         description: 'Dinos, Lomepal, Lefa and more',
         artist: '',
       },
       {
-        src: "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb400bb60cc514557fcf3c06a7/5/en/default",
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb400bb60cc514557fcf3c06a7/5/en/default',
         title: 'Daily Mix 5',
         description: 'Envy, Thimajin, Fredz and more',
         artist: '',
       },
       {
-        src: "https://newjams-images.scdn.co/image/ab67647800003f8a/dt/v3/release-radar/ab6761610000e5eb2edc26862c486859b32591bb/en",
+        src: 'https://newjams-images.scdn.co/image/ab67647800003f8a/dt/v3/release-radar/ab6761610000e5eb2edc26862c486859b32591bb/en',
         title: 'Release Radar',
         description: 'Catch all the latest music from artist you like',
         artist: '',
@@ -55,7 +59,7 @@ const lists = [
     name: 'Jump back in',
     elements: [
       {
-        src: "	https://i.scdn.co/image/ab67616d00001e029f16b4e122ad65083b02d659",
+        src: '	https://i.scdn.co/image/ab67616d00001e029f16b4e122ad65083b02d659',
         title: 'Osmin',
         description: '',
         artist: 'Zinée',
@@ -78,25 +82,25 @@ const lists = [
     name: 'Recently played',
     elements: [
       {
-        src: "https://i.scdn.co/image/ab67616d00001e02b629878b4e36e9937d5a452e",
+        src: 'https://i.scdn.co/image/ab67616d00001e02b629878b4e36e9937d5a452e',
         title: 'garder le sourire',
         description: 'arøne',
         artist: '',
       },
       {
-        src: "https://i.scdn.co/image/ab67616d00001e02ad9f89c7cd76f76eb0c1fc3e",
+        src: 'https://i.scdn.co/image/ab67616d00001e02ad9f89c7cd76f76eb0c1fc3e',
         title: 'Cyborg',
         description: '',
         artist: 'Nekfeu',
       },
       {
-        src: "https://i.scdn.co/image/ab67616d00001e02d17080d3e3b8706f2147341d",
+        src: 'https://i.scdn.co/image/ab67616d00001e02d17080d3e3b8706f2147341d',
         title: "L'Amour",
-        description: "",
+        description: '',
         artist: 'Disiz',
       },
       {
-        src: "https://i.scdn.co/image/ab67616d00001e02805ae6e215ce80d74f51329b",
+        src: 'https://i.scdn.co/image/ab67616d00001e02805ae6e215ce80d74f51329b',
         title: 'WINNTERMANIA',
         description: '',
         artist: 'winnterzuko',
@@ -134,20 +138,30 @@ function Element({
   description: string
   artist: string
 }) {
+  const currentSongContext = useContext(CurrentSongContext)
+  const handleClick = () => {
+    if (currentSongContext == null) return
+    currentSongContext.setCurrentSong({
+      imageUrl: src,
+      artistName: artist,
+      songName: title,
+    })
+  }
+
   return (
-    <Card className="h-80 w-56 border-none">
+    <Card className="h-80 w-56 border-none" onClick={handleClick}>
       <CardHeader>
         <CardTitle className="text-base font-semibold text-white">
-          <div className='flex justify-center'>
-          <Image
-            src={src}
-            alt="image cover of the playlist"
-            width={200}
-            height={200}
-            className="rounded-lg"
+          <div className="flex justify-center">
+            <Image
+              src={src}
+              alt="image cover of the playlist"
+              width={200}
+              height={200}
+              className="rounded-lg"
             />
-            </div>
-            {title}
+          </div>
+          {title}
         </CardTitle>
         <CardDescription className=" text-subdued">
           {description}

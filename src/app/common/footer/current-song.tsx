@@ -1,14 +1,26 @@
+'use client'
+
 import { CircleCheck } from 'lucide-react'
 import Image from 'next/image'
-import yourEpisodes from '/public/yourEpisodes.png'
+import { useContext } from 'react'
+import { CurrentSongContext } from '../context/current-song'
 
 export default function CurrentSong() {
+  const currentSongContext = useContext(CurrentSongContext)
+  if (!currentSongContext) return null
+
   return (
     <section className="flex w-1/3 space-x-2">
-      <Image src={yourEpisodes} alt="song's cover" className="rounded-md" />
+      <Image
+        src={currentSongContext.currentSong.imageUrl}
+        alt="song's cover"
+        className="h-14 w-14 rounded-md"
+        width={56}
+        height={56}
+      />
       <div className="flex flex-col justify-center">
-        <p>current song</p>
-        <p>Album</p>
+        <p>{currentSongContext.currentSong.songName}</p>
+        <p>{currentSongContext.currentSong.artistName}</p>
       </div>
       <div className="flex items-center justify-center">
         <CircleCheck className="fill-spotify stroke-black" />
