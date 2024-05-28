@@ -1,8 +1,10 @@
 // Panel Size
 export const PANEL_SIZE = {
+  default: 20,
   min : 4,
   small: 10,
   medium: 15,
+  large: 25,
   max : 78,
 }
 

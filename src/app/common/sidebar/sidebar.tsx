@@ -8,18 +8,11 @@ import { PANEL_SIZE } from './const'
 import Menu from './menu'
 import YourLibrary from './your-library'
 
-const DEFAUT_SIZE = 20
-
 export default function Sidebar() {
   const [arrow, setArrow] = useState<React.ReactNode>(<MoveRight />)
   const panelRef = useRef<ImperativePanelHandle>(null)
 
   const handleResize = (size: number) => {
-    // if (size <= MIN_PANEL_SIZE) {
-    //   size = MIN_PANEL_SIZE
-    //   panelRef.current?.resize(MIN_PANEL_SIZE)
-    // }
-
     // si la taille <= 7,5 on met 5
     if (size <= PANEL_SIZE.small) {
       panelRef.current?.resize(PANEL_SIZE.min)
@@ -28,17 +21,30 @@ export default function Sidebar() {
     if (size > PANEL_SIZE.small && size < PANEL_SIZE.medium) {
       panelRef.current?.resize(PANEL_SIZE.medium)
     }
-    size >= 35
-      ? setArrow(<MoveLeft className="stroke-grey-500" />)
-      : setArrow(<MoveRight className="stroke-grey-500" />)
-    // panelRef.current?.resize(size)
+    size >= PANEL_SIZE.large
+      ? setArrow(
+          <MoveLeft
+            className="stroke-grey-500"
+            onClick={() => {
+              panelRef.current?.resize(PANEL_SIZE.medium)
+            }}
+          />,
+        )
+      : setArrow(
+          <MoveRight
+            className="stroke-grey-500"
+            onClick={() => {
+              panelRef.current?.resize(PANEL_SIZE.large)
+            }}
+          />,
+        )
   }
 
   return (
     <ResizablePanel
       onResize={handleResize}
       ref={panelRef}
-      defaultSize={DEFAUT_SIZE}
+      defaultSize={PANEL_SIZE.default}
       minSize={PANEL_SIZE.min}
       maxSize={PANEL_SIZE.max}
       className="min-w-20"
