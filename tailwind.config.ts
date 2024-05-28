@@ -18,6 +18,7 @@ const config = {
       colors: {
         badge: "#232222",
         base: "#121212",
+        volume: "#ffffff4d",
         grey: {
           500: "#838283"
         },
