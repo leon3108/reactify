@@ -22,7 +22,7 @@ export default function Player({ volume }: { volume: number }) {
   const [playerValue, setPlayerValue] = useState(0)
 
   if (audioRef.current != null) {
-    audioRef.current.volume = volume / 100;
+    audioRef.current.volume = volume / 100
   }
 
   // useEffect(() => {
@@ -42,6 +42,20 @@ export default function Player({ volume }: { volume: number }) {
       }
     }
   }, [])
+
+  useEffect(() => {
+    const handleKeyDown = (event: { key: string }) => {
+      if (event.key === ' ') {
+        playPause()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  })
 
   const handleTimeUpdate = () => {
     if (audioUrl) {
