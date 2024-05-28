@@ -1,0 +1,32 @@
+import { Slider } from '@/ui/slider'
+import { Volume2 } from 'lucide-react'
+import { Dispatch, SetStateAction } from 'react'
+
+export default function Volume({
+  volume,
+  setVolume,
+}: {
+  volume: number
+  setVolume: Dispatch<SetStateAction<number>>
+}) {
+  const handleMutePlay = () => {
+    if (volume === 0) {
+      setVolume(50)
+    } else {
+      setVolume(0)
+    }
+  }
+
+  return (
+    <section className="flex w-1/3 items-center justify-end">
+      <div className="flex w-1/2 justify-end space-x-1 pl-10 pr-2">
+        <Volume2 onClick={handleMutePlay} />
+        <Slider
+          defaultValue={[volume]}
+          value={[volume]}
+          onValueChange={(volume) => setVolume(volume[0])}
+        />
+      </div>
+    </section>
+  )
+}

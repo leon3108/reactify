@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
-export default function Player() {
+export default function Player({ volume }: { volume: number }) {
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
   const [audioUrl, setAudioUrl] = useState(
@@ -20,6 +20,10 @@ export default function Player() {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [playerValue, setPlayerValue] = useState(0)
+
+  if (audioRef.current != null) {
+    audioRef.current.volume = volume / 100;
+  }
 
   // useEffect(() => {
   //   const fetchAudioUrl = async () => {
@@ -54,8 +58,6 @@ export default function Player() {
     if (!audio) return
     if (isPlaying) {
       audio.pause()
-      // audio.currentTime = 0
-      // setCurrentTime(0)
     } else {
       audio.play()
     }
@@ -65,7 +67,11 @@ export default function Player() {
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60)
     const secs = Math.floor(seconds % 60)
-    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`
+    const time =
+      isNaN(minutes) || isNaN(secs)
+        ? '0'
+        : `${minutes}:${secs < 10 ? '0' : ''}${secs}`
+    return `${time}`
   }
 
   const handleValueChange = (value: number[]) => {
@@ -95,7 +101,11 @@ export default function Player() {
       ></audio>
       <div className="flex w-full space-x-2">
         <span>{formatTime(currentTime)}</span>
-        <Slider value={[playerValue]} defaultValue={[0]} onValueChange={handleValueChange} />
+        <Slider
+          value={[playerValue]}
+          defaultValue={[0]}
+          onValueChange={handleValueChange}
+        />
         <span>{formatTime(duration)}</span>
       </div>
     </section>
