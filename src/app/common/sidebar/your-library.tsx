@@ -16,7 +16,7 @@ export default function YourLibrary({
   arrow: React.ReactNode
 }) {
   return (
-    <Card className="h-full bg-base">
+    <Card className=" bg-base">
       <CardContent
         className={cn(
           'space-y-2',
