@@ -1,7 +1,10 @@
 'use client'
 
 import { cn } from '@/lib/utils'
+import { Play } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
+import { useContext } from 'react'
+import { CurrentSongContext } from '../common/context/current-song'
 import likedSongs from '/public/liked-songs-300.png'
 
 const list = [
@@ -46,8 +49,17 @@ function GridElement({
   title: string
   src: string | StaticImageData
 }) {
+  const currentSongContext = useContext(CurrentSongContext)
+  const handleClick = () => {
+    if (currentSongContext == null) return
+    currentSongContext.setCurrentSong({
+      imageUrl: src,
+      artistName: '',
+      songName: title,
+    })
+  }
   return (
-    <div className="flex h-12 w-full items-center space-x-2 rounded-sm bg-[#FFFFFF12] hover:bg-[#FFFFFF33] lg:h-16 xl:h-20">
+    <div className="group relative flex h-12 w-full items-center space-x-2 rounded-sm bg-[#FFFFFF12] hover:bg-[#FFFFFF33] lg:h-16 xl:h-20">
       <Image
         src={src}
         alt="cover image"
@@ -56,6 +68,12 @@ function GridElement({
         height={80}
       />
       <p className="flex w-5/6 flex-grow">{title}</p>
+      <div className="absolute right-4 h-12 w-12 rounded-full bg-spotify p-2 opacity-0 group-hover:opacity-100">
+        <Play
+          className="h-8 w-8 fill-black stroke-black p-2"
+          onClick={handleClick}
+        />
+      </div>
     </div>
   )
 }
