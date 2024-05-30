@@ -77,9 +77,21 @@ export const sidebarList = [
     isPinned: false,
   },
   {
-    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
-    title: 'Henri Bleu',
-    type: 'Artiste',
+    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    type: 'Album • Deen Burbigo',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    type: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    type: 'Album • Kaozed',
     isPinned: false,
   },
   {
@@ -95,15 +107,21 @@ export const sidebarList = [
     isPinned: false,
   },
   {
-    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
-    title: 'Henri Bleu',
-    type: 'Artiste',
+    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    type: 'Album • Deen Burbigo',
     isPinned: false,
   },
   {
-    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
-    title: 'Henri Bleu',
-    type: 'Artiste',
+    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    type: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    type: 'Album • Kaozed',
     isPinned: false,
   },
 ]

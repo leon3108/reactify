@@ -19,9 +19,9 @@ function LibraryElement({
   panelRef,
 }: {
   src: string | StaticImageData
-  title: String
-  type: String
-  isPinned: Boolean
+  title: string
+  type: string
+  isPinned: boolean
   panelRef: React.RefObject<ImperativePanelHandle>
 }) {
   return (
@@ -36,7 +36,7 @@ function LibraryElement({
       >
         <Image
           src={src}
-          alt="likedSongs"
+          alt={title}
           width={48}
           height={48}
           className={cn(
@@ -73,7 +73,7 @@ export default function LibraryList({
   panelRef: React.RefObject<ImperativePanelHandle>
 }) {
   return (
-    <section className="flex flex-col space-y-2">
+    <section className="flex flex-col space-y-2 overflow-hidden">
       <ScrollArea>
         {sidebarList.map((item, index) => (
           <LibraryElement

@@ -16,10 +16,10 @@ export default function YourLibrary({
   arrow: React.ReactNode
 }) {
   return (
-    <Card className=" bg-base">
+    <Card className="flex h-full bg-base">
       <CardContent
         className={cn(
-          'space-y-2',
+          'flex h-full w-full flex-col space-y-2',
           panelRef.current?.getSize()! <= PANEL_SIZE.min ? 'p-0' : '',
         )}
       >
