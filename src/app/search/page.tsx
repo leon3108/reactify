@@ -1,4 +1,5 @@
 import Navbar from '../common/navbar'
+import Browse from './components/browse'
 import RecentsSearches from './components/recents-searches'
 
 export default function Home() {
@@ -6,8 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-1">
       <Navbar />
       <RecentsSearches />
-      {/* nav bar */}
-      {/* recents searches */}
+      <Browse />
       {/* grid */}
       {/* footer */}
     </main>

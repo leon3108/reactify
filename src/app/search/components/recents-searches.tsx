@@ -28,7 +28,7 @@ export default function RecentsSearches() {
       <h2 className="text-xl font-extrabold">Recents Searches</h2>
       <div className="flex space-x-2">
         {RecentsSearchesList.map((item) => (
-          <div className="hover:bg-card">
+          <div className="hover:bg-card" key={item.title}>
             <Image
               src={item.imageUrl}
               alt={item.title}
