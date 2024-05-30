@@ -6,7 +6,8 @@ const nextConfig = {
       'dailymix-images.scdn.co',
       'newjams-images.scdn.co',
       'concerts.spotifycdn.com',
-      't.scdn.co'
+      't.scdn.co',
+      'charts-images.scdn.co'
     ],
   }
 };
