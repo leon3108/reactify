@@ -2,9 +2,9 @@
 
 import { ScrollArea } from '@/ui/scroll-area'
 import { useEffect } from 'react'
+import Navbar from './common/navbar'
 import Filter from './components/filter'
 import GoodMorning from './components/good-morning'
-import Navbar from './components/navbar'
 import Recommendations from './components/recommendations'
 
 export default function Home() {
