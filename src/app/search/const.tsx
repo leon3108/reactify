@@ -213,143 +213,182 @@ export const browseList = [
     color: '#103369',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf2360f600ea2912a0fe299e2d',
     name: 'Trending',
-    color: '',
+    color: '#0d73ec',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafcf397dbb73818b5b5deb84a8',
     name: 'Equal',
-    color: '',
+    color: '#148a08',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafe760702de052fbefea27064a',
     name: 'Radar',
-    color: '',
+    color: '#a56752',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf12809992dfc5b318892ea07b',
     name: 'Classical',
-    color: '',
+    color: '#834b36',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafcc70a3c2e4c71398708bdc4a',
     name: 'Folk & Acoustic',
-    color: '',
+    color: '#c45620',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67706f00000002e4eadd417a05b2546e866934',
     name: 'Focus',
-    color: '',
+    color: '#52364e',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafd82e2c83fe100a89e9cbb2a2',
     name: 'Soul',
-    color: '',
+    color: '#e7048b',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf51565028ee4188dbee2e4aa5',
     name: 'Netflix',
-    color: '',
+    color: '#ed2d20',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf8a04560a209b3f32165ea8a2',
     name: 'Kids & Family',
-    color: '',
+    color: '#9066a6',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafdad1281e13697e8d8cf8f347',
     name: 'Student',
-    color: '',
+    color: '#b62592',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf26dd3719e8824756914ae61f',
     name: 'Gaming',
-    color: '',
+    color: '#f4015c',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf8dec632effd9735fa8aba06e',
     name: 'Wellness',
-    color: '',
+    color: '#aa6756',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafb2cdd7a95b0a5444aa15cfb5',
     name: 'Punk',
-    color: '',
+    color: '#193261',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafa6ee95dc83af715115f40522',
     name: 'Ambient',
-    color: '',
+    color: '#3b7e93',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafc0d2222b4c6441930e1a386e',
     name: 'Country',
-    color: '',
+    color: '#e23d20',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caff22ac5cab318d550b593ffac',
     name: 'Blues',
-    color: '',
+    color: '#b66041',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf3271ef796498ae4f97db81e2',
     name: 'Arab',
-    color: '',
+    color: '#0075e5',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf56eef06f4b98ea3ed5ffc8d5',
     name: 'Travel',
-    color: '',
+    color: '#01846b',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf8ba1febbb4f77336b6f9aace',
     name: 'Caribbean',
-    color: '',
+    color: '#0075e5',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafb973ab1288f74f333e7e2e22',
     name: 'Songwriters',
-    color: '',
+    color: '#921535',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafbbf84e26e69a78883118913c',
     name: 'Nature & Noise',
-    color: '',
+    color: '#3b7e93',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafbb0e4ea229824157eee7467d',
     name: 'Funk & Disco',
-    color: '',
+    color: '#f2103b',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf9571e2fc2a85d91eda472f04',
     name: 'Frequency',
-    color: '',
+    color: '#0075e5',
   },
   {
-    imageURL: '',
+    imageURL: 'https://t.scdn.co/images/37732285a0ff4e24987cdf5c45bdf31f.png',
     name: 'Tastemakers',
-    color: '',
+    color: '#f4015c',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf50cfe3fbd3a9fb8810da45ea',
     name: 'Glow',
-    color: '',
+    color: '#0075e5',
   },
   {
-    imageURL: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005caf14030380532b34badbf0a229',
     name: 'Spotify Singles',
-    color: '',
+    color: '#777676',
   },
   {
-    imageURL: '',
-    name: 'League of Legends',
-    color: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67706f00000002c19c5f13f8b3ff2d73ff00bc',
+    name: 'Anime',
+    color: '#f11164',
   },
   {
-    imageURL: '',
-    name: 'EQUAL Arabia',
-    color: '',
+    imageURL:
+      'https://i.scdn.co/image/ab67706f000000028ed1a5002b96c2ea882541b2',
+    name: 'Instrumental',
+    color: '#4a7b9f',
+  },
+  {
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafe53d71d0920a4f1f441d803c',
+    name: 'Cooking & Dining',
+    color: '#c25a22',
+  },
+  {
+    imageURL:
+      'https://i.scdn.co/image/ab67fb8200005cafcc1499bbb8565f490858c2bc',
+    name: 'Fresh Finds',
+    color: '#fe008e',
   },
 ]
