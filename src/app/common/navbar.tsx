@@ -10,7 +10,7 @@ import {
   ChevronRight,
   Search,
 } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Navbar({ path }: { path: string }) {
   const inputRef = useRef<HTMLInputElement>(null)
@@ -20,6 +20,8 @@ export default function Navbar({ path }: { path: string }) {
       inputRef.current.focus()
     }
   }, [])
+
+  const [text, setText] = useState('')
   return (
     <nav className="flex h-12 w-full items-center justify-between">
       <div className="flex items-center space-x-2">
@@ -35,6 +37,9 @@ export default function Navbar({ path }: { path: string }) {
             className="w-96"
             placeholder="What do you want to play?"
             icon={<Search className="stroke-[#b3b3b3]" size={20} />}
+            onChange={(e) => setText(e.target.value)}
+            value={text}
+            setValue={setText}
           />
         )}
       </div>
