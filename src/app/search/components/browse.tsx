@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { browseList } from '../const';
+import { browseList } from '../const'
 
 function GridElement({
   item,
@@ -12,13 +12,13 @@ function GridElement({
       style={{ backgroundColor: item.color }}
     >
       <h2 className="text-2xl font-semibold text-white">{item.name}</h2>
-      <div className="absolute bottom-0 right-0 rotate-12 transform">
+      <div className="absolute bottom-0 right-[-20px] rotate-[30deg] transform">
         <Image
           src={item.imageURL}
           alt="Live Event"
           width={100}
           height={150}
-          className="rounded-lg"
+          className="rounded-sm"
         />
       </div>
     </div>
