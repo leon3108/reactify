@@ -2,7 +2,10 @@ import { Badge } from '@/ui/badge'
 
 export default function FilterByType({}: {}) {
   return (
-    <section className="flex space-x-2 overflow-hidden">
+    <section
+      className="flex h-20 space-x-2 overflow-x-auto"
+      style={{ scrollbarWidth: 'none' }}
+    >
       <Badge variant={'secondary'} className="h-7">
         Playlist
       </Badge>
