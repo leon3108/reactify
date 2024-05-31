@@ -6,9 +6,9 @@ import RecentsSearches from './components/recents-searches'
 
 export default function Home() {
   return (
-    <main className="h-full w-full p-1">
+    <main className="w-fbg-pink-500 mt-2 h-full bg-card p-4">
+      <Navbar path="search" />
       <ScrollArea className="flex h-full w-full flex-col items-center ">
-        <Navbar />
         <RecentsSearches />
         <Browse />
         <SearchFooter />

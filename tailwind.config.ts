@@ -19,6 +19,9 @@ const config = {
         badge: "#232222",
         base: "#121212",
         volume: "#ffffff4d",
+        black : {
+          500 : "#242424",
+        },
         grey: {
           500: "#838283"
         },

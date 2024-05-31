@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="mr-2 mt-2 flex h-full w-full flex-col space-y-4 rounded-lg bg-base p-5 pb-0">
-      <Navbar />
+      <Navbar path="home" />
       <Filter />
       <ScrollArea className="@container">
         <GoodMorning />
