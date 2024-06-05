@@ -1,18 +1,40 @@
-# ULTRA IMPORTANT 
+# ⚠️⚠️ IMPORTANT ⚠️⚠️ 
 
-il faut enelever le ```display:table``` dans ```node_modules/@radix-ui/react-scroll-area/dist/index.js``` et ```/home/leon/work/spotiflex/node_modules/@radix-ui/react-scroll-area/dist/index.mjs```
+You should remove ```display:table``` in ```node_modules/@radix-ui/react-scroll-area/dist/index.js``` and ```/home/leon/work/spotiflex/node_modules/@radix-ui/react-scroll-area/dist/index.mjs```
 
-
-# BoirlerPlateWEB2024
-
-## Stack
-
-React + NextJS, Prisma Orm, Tailwind, Typescript, Zod, React Hook Form, Shadcn/ui
+it's beyond my control, as I write these lines shadcn/ui has a bug with this component. The ContextMenuItem alos has a bug on hover. I have already opened an issue on their repo. 
 
 
-### Possible package à ajouter :
 
-Resend, react-email, GSAP, NextAuth
+## Description
 
-Neon pour deploy la db
-Vercel pour deploy l'app
+This project is a re-implementation of the Spotify interface.
+
+I have re-implemented the `/` and `/search` route. I did not implement dynamic feature like fetching neither any CRUD operations.
+
+### Stack
+
+This project was initiated with my boilerplate, inside there is :
+
+React + NextJS, 
+Prisma Orm,
+Tailwind,
+Typescript,
+Zod,
+React Hook Form,
+Shadcn/ui
+
+I didn't use everything
+
+
+## Install
+
+```bash
+pnpm i
+```
+
+## Run
+
+```bash
+pnpm run dev
+```
