@@ -1,4 +1,4 @@
-import Footer from '@/app/common/footer/footer'
+import Footer from '@/app/common/playerFooter/playerFooter'
 import SideBar from '@/app/common/sidebar/sidebar'
 import { ThemeProvider } from '@/app/theme-provider'
 import {

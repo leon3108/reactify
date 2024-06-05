@@ -12,23 +12,25 @@ export default function CurrentSong() {
 
   return (
     <section className="flex w-1/3 space-x-2">
-      {currentSongContext.currentSong.imageUrl == '' ? (
-        <SongSkeleton />
-      ) : (
-        <Image
-          src={currentSongContext.currentSong.imageUrl}
-          alt="song's cover"
-          className="h-14 w-14 rounded-md"
-          width={56}
-          height={56}
-        />
-      )}
+      <div className="ml-4 flex items-center justify-center">
+        {currentSongContext.currentSong.imageUrl == '' ? (
+          <SongSkeleton />
+        ) : (
+          <Image
+            src={currentSongContext.currentSong.imageUrl}
+            alt="song's cover"
+            className="h-14 w-14 rounded-md"
+            width={56}
+            height={56}
+          />
+        )}
+      </div>
       <div className="flex flex-col justify-center">
         <p>{currentSongContext.currentSong.songName}</p>
         <p>{currentSongContext.currentSong.artistName}</p>
       </div>
       <div className="flex items-center justify-center">
-        <CircleCheck className="fill-spotify stroke-black" />
+        <CircleCheck className="fill-spotify stroke-black-500" />
       </div>
     </section>
   )

@@ -1,17 +1,17 @@
 'use client'
 
+import { useState } from 'react'
 import CurrentSong from './current-song'
 import Player from './player'
 import Volume from './volume'
-import { useState } from 'react'
 
-export default function Footer() {
+export default function PlayerFooter() {
   const [volume, setVolume] = useState(50)
   return (
     <footer className="flex h-20 w-full justify-between ">
       <CurrentSong />
-      <Player volume={volume}/>
-      <Volume volume={volume} setVolume={setVolume}/>
+      <Player volume={volume} />
+      <Volume volume={volume} setVolume={setVolume} />
     </footer>
   )
 }

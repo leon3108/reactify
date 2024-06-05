@@ -40,20 +40,22 @@ const footerList = [
 
 export default function FooterLinks() {
   return (
-    <div className="bg-black px-6 py-8 text-white">
-      <div className="container mx-auto flex justify-between">
-        {footerList.map((item, index) => (
-          <div key={index}>
-            <h4 className="font-bold">{item.title}</h4>
-            <ul>
-              {item.links.map((link, index) => (
-                <li key={index} className="text-subdued">
-                  {link.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <div className="bg-black py-8 text-white">
+      <div className=" flex justify-between">
+        <div className="flex w-4/6 justify-between">
+          {footerList.map((item, index) => (
+            <div key={index}>
+              <h4 className="font-bold">{item.title}</h4>
+              <ul>
+                {item.links.map((link, index) => (
+                  <li key={index} className="text-subdued">
+                    {link.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
         <div className="flex space-x-4">
           <Instagram />
           <Twitter />

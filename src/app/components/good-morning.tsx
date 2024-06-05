@@ -70,7 +70,7 @@ function GridElement({
       <p className="flex w-5/6 flex-grow">{title}</p>
       <div className="absolute right-4 h-12 w-12 rounded-full bg-spotify p-2 opacity-0 group-hover:opacity-100">
         <Play
-          className="h-8 w-8 fill-black stroke-black p-2"
+          className="h-8 w-8 fill-black-500 stroke-black-500 p-2"
           onClick={handleClick}
         />
       </div>

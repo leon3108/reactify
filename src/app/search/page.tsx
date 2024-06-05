@@ -1,6 +1,6 @@
 import { ScrollArea } from '@/ui/scroll-area'
+import SearchFooter from '../common/footer/search-footer'
 import Navbar from '../common/navbar'
-import SearchFooter from './components/SearchFooter/search-footer'
 import Browse from './components/browse'
 import RecentsSearches from './components/recents-searches'
 

@@ -2,6 +2,8 @@
 
 import { ScrollArea } from '@/ui/scroll-area'
 import { useEffect } from 'react'
+import FooterLegal from './common/footer/footer-legal'
+import FooterLinks from './common/footer/footer-link'
 import Navbar from './common/navbar'
 import Filter from './components/filter'
 import GoodMorning from './components/good-morning'
@@ -33,6 +35,8 @@ export default function Home() {
       <ScrollArea className="@container">
         <GoodMorning />
         <Recommendations />
+        <FooterLinks />
+        <FooterLegal />
       </ScrollArea>
     </main>
   )
