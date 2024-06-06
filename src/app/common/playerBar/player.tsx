@@ -1,5 +1,6 @@
 'use client'
 
+import { formatTime } from '@/lib/utils'
 import { Slider } from '@/ui/slider'
 import {
   CirclePause,
@@ -66,16 +67,6 @@ export default function Player({ volume }: { volume: number }) {
       audio.play()
     }
     setIsPlaying(!isPlaying)
-  }
-
-  const formatTime = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60)
-    const secs = Math.floor(seconds % 60)
-    const time =
-      isNaN(minutes) || isNaN(secs)
-        ? '0'
-        : `${minutes}:${secs < 10 ? '0' : ''}${secs}`
-    return `${time}`
   }
 
   const handleValueChange = (value: number[]) => {

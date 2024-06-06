@@ -86,8 +86,8 @@ handleKeywdown créer un custom Hook pour play/Pause
 player.tsx audioRef.current mettre dans un state ?
 
 
-formatTime le mettre dans utils
-    le tester aussi
+~~formatTime le mettre dans utils~~
+tester formatTime
 
 ~~PlayerFooter mettre section~~
 

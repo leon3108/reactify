@@ -1,59 +1,39 @@
 import { cn } from '@/lib/utils'
 import { Card, CardContent } from '@/ui/card'
-import { Home, Search } from 'lucide-react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import React from 'react'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { ICON_SIZE, PANEL_SIZE, TEXT_GRAY_500 } from './const'
+import { MenuList, PANEL_SIZE } from './const'
+import MenuItem from './menu-item'
 
 export default function Menu({
   panelRef,
 }: {
   panelRef: React.RefObject<ImperativePanelHandle>
 }) {
-  const pathname = usePathname()
+  const panelSizeIsMin = panelRef.current?.getSize() == PANEL_SIZE.min
+  const panelSizeIsBiggerThanMin =
+    panelRef.current && panelRef.current.getSize() > PANEL_SIZE.min
 
   return (
     <Card
       className={cn(
         'h-28 bg-base ',
-        panelRef.current?.getSize() == PANEL_SIZE.min
-          ? 'items-center justify-between'
-          : '',
+        panelSizeIsMin ? 'items-center justify-between' : '',
       )}
     >
       <CardContent
         className={cn(
-          'mt-2 flex flex-col justify-evenly h-full',
-          panelRef.current?.getSize() == PANEL_SIZE.min ? 'items-center ' : '',
+          'mt-2 flex h-full flex-col justify-evenly',
+          panelSizeIsMin ? 'items-center ' : '',
         )}
       >
-        <Link
-          href="/"
-          className={`${pathname == '/' ? 'text-white ' : 'text-gray-500 '} flex space-x-2 font-bold`}
-        >
-          <Home
-            size={ICON_SIZE}
-            className="hover:cursor-pointer"
-            color={pathname == '/' ? 'white' : TEXT_GRAY_500}
+        {MenuList.map((item) => (
+          <MenuItem
+            key={item.route}
+            panelSizeIsBiggerThanMin={panelSizeIsBiggerThanMin}
+            {...item}
           />
-          {panelRef.current && panelRef.current.getSize() > PANEL_SIZE.min ? (
-            <p>Home</p>
-          ) : null}
-        </Link>
-        <Link
-          href="/search"
-          className={`${pathname == '/search' ? 'text-white ' : 'text-gray-500 '} flex space-x-2 font-bold`}
-        >
-          <Search
-            size={ICON_SIZE}
-            className="hover:cursor-pointer"
-            color={pathname == '/search' ? 'white' : TEXT_GRAY_500}
-          />
-          {panelRef.current && panelRef.current.getSize() > PANEL_SIZE.min ? (
-            <p>Search</p>
-          ) : null}
-        </Link>
+        ))}
       </CardContent>
     </Card>
   )

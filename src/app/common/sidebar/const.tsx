@@ -1,25 +1,27 @@
+import { Home, Search } from 'lucide-react'
 import likedSongs from '/public/liked-songs-300.png'
 import yourEpisodes from '/public/yourEpisodes.png'
-
 
 // Panel Size
 export const PANEL_SIZE = {
   default: 20,
-  min : 4,
+  min: 4,
   small: 10,
   medium: 15,
   large: 25,
-  max : 78,
+  max: 78,
 }
 
 // Icon
 export const ICON_SIZE = 24
 
-
 // Color
 export const TEXT_GRAY_500 = '#a7a6a7'
 
-
+export const MenuList = [
+  { route: '/', name: 'Home', Icon: <Home /> },
+  { route: '/search', name: 'search', Icon: <Search /> },
+]
 
 export const sidebarList = [
   {
