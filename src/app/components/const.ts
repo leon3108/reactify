@@ -150,3 +150,41 @@ export const RecommendationsList: Playlist[] = [
     ],
   },
 ]
+
+export const FooterLinks = [
+  {
+    title: 'Company',
+    links: [
+      { name: 'About', link: '#' },
+      { name: 'Jobs', link: '#' },
+      { name: 'For the Record', link: '#' },
+    ],
+  },
+  {
+    title: 'Communities',
+    links: [
+      { name: 'For Artists', link: '#' },
+      { name: 'Developers', link: '#' },
+      { name: 'Advertising', link: '#' },
+      { name: 'Investors', link: '#' },
+      { name: 'Vendors', link: '#' },
+    ],
+  },
+  {
+    title: 'Useful links',
+    links: [
+      { name: 'Support', link: '#' },
+      { name: 'Free Mobile App', link: '#' },
+    ],
+  },
+  {
+    title: 'Spotify Plans',
+    links: [
+      { name: 'Premium Individual', link: '#' },
+      { name: 'Premium Duo', link: '#' },
+      { name: 'Premium Family', link: '#' },
+      { name: 'Premium Student', link: '#' },
+      { name: 'Spotify Free', link: '#' },
+    ],
+  },
+]

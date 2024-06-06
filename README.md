@@ -67,13 +67,13 @@ element dans une liste à séparer dans un fichier
 
 ~~filter.tsx mapper pour afficher les badges~~
 
-playerFooter changer de nom
+~~playerFooter changer de nom~~
 
-footer-legal map
+~~footer-legal map~~
 
-footer-link => create type link
+~~footer-link => create type link~~
 
-search Footer rename en footer
+~~search Footer rename en footer~~
 
 page.tsx navbar; children pour afficher l'input ?
 

@@ -2,8 +2,8 @@
 
 import { ScrollArea } from '@/ui/scroll-area'
 import { useEffect } from 'react'
-import FooterLegal from './common/footer/footer-legal'
-import FooterLinks from './common/footer/footer-link'
+import FooterLegal from './common/footer/legal'
+import FooterLinks from './common/footer/links'
 import Navbar from './common/navbar'
 import Filter from './components/filter'
 import GoodMorning from './components/good-morning'

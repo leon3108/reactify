@@ -1,5 +1,5 @@
 import { ScrollArea } from '@/ui/scroll-area'
-import SearchFooter from '../common/footer/search-footer'
+import Footer from '../common/footer/footer'
 import Navbar from '../common/navbar'
 import Browse from './components/browse'
 import RecentsSearches from './components/recents-searches'
@@ -11,7 +11,7 @@ export default function Home() {
       <ScrollArea className="flex h-full w-full flex-col items-center ">
         <RecentsSearches />
         <Browse />
-        <SearchFooter />
+        <Footer />
       </ScrollArea>
     </main>
   )
