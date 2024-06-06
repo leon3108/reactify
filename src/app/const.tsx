@@ -1,3 +1,321 @@
+import { Home, Search } from 'lucide-react'
+import { Playlist } from './type'
+import likedSongs from '/public/liked-songs-300.png'
+import yourEpisodes from '/public/yourEpisodes.png'
+
+export const RecentsListeninglist = [
+  {
+    src: likedSongs,
+    title: 'leno + Leno',
+  },
+  {
+    src: likedSongs,
+    title: 'Liked Songs',
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d00001e02d726484fcdb087409ded0765',
+    title: 'Toko dombi',
+  },
+  {
+    src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb34925ec32cd90699e1021914/1/en/default',
+    title: 'Daily Mix 2',
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d00001e02729099a8ed5ab9795eee1c9d',
+    title: 'JAAFAR',
+  },
+  {
+    src: 'https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/aAbca4VNfzWuUCQ_FGiEFA==/bmVuZW5lbmVuZW5lbmVuZQ==',
+    title: 'Discover Weekly',
+  },
+  {
+    src: likedSongs,
+    title: 'Daily Drive',
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d00001e02ff32827efb25248cd37819e1',
+    title: 'Trix city 2',
+  },
+]
+
+export const RecommendationsList: Playlist[] = [
+  {
+    name: 'Made for Leon',
+    items: [
+      {
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb34925ec32cd90699e1021914/1/en/default',
+        title: 'Daily Mix 1',
+        description: 'B.B Jacques, Népal, Lujipeka and more',
+        artist: '',
+      },
+      {
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb92f66833fe2a9a854f888042/2/en/default',
+        title: 'Daily Mix 2',
+        description: 'Laylow, Luidji, Zinée and more',
+        artist: '',
+      },
+      {
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb2b550c4ab38ac680700abc42/3/en/default',
+        title: 'Daily Mix 3',
+        description: 'Malo, Jwles, Luther and more',
+        artist: '',
+      },
+      {
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb976140e777ab37c7f262a910/4/en/default',
+        title: 'Daily Mix 4',
+        description: 'Dinos, Lomepal, Lefa and more',
+        artist: '',
+      },
+      {
+        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb400bb60cc514557fcf3c06a7/5/en/default',
+        title: 'Daily Mix 5',
+        description: 'Envy, Thimajin, Fredz and more',
+        artist: '',
+      },
+      {
+        src: 'https://newjams-images.scdn.co/image/ab67647800003f8a/dt/v3/release-radar/ab6761610000e5eb2edc26862c486859b32591bb/en',
+        title: 'Release Radar',
+        description: 'Catch all the latest music from artist you like',
+        artist: '',
+      },
+    ],
+  },
+  {
+    name: 'Jump back in',
+    items: [
+      {
+        src: '	https://i.scdn.co/image/ab67616d00001e029f16b4e122ad65083b02d659',
+        title: 'Osmin',
+        description: '',
+        artist: 'Zinée',
+      },
+      {
+        src: 'https://i.scdn.co/image/ab67616d00001e028bf2a471579eed48772f5b1e',
+        title: 'Cannelloni',
+        description: '',
+        artist: 'SCH',
+      },
+      {
+        src: '	https://i.scdn.co/image/ab67616d00001e02701a315dea23417e89e72707',
+        title: 'M1NDSET',
+        description: '',
+        artist: 'Take a Mic',
+      },
+    ],
+  },
+  {
+    name: 'Recently played',
+    items: [
+      {
+        src: 'https://i.scdn.co/image/ab67616d00001e02b629878b4e36e9937d5a452e',
+        title: 'garder le sourire',
+        description: 'arøne',
+        artist: '',
+      },
+      {
+        src: 'https://i.scdn.co/image/ab67616d00001e02ad9f89c7cd76f76eb0c1fc3e',
+        title: 'Cyborg',
+        description: '',
+        artist: 'Nekfeu',
+      },
+      {
+        src: 'https://i.scdn.co/image/ab67616d00001e02d17080d3e3b8706f2147341d',
+        title: "L'Amour",
+        description: '',
+        artist: 'Disiz',
+      },
+      {
+        src: 'https://i.scdn.co/image/ab67616d00001e02805ae6e215ce80d74f51329b',
+        title: 'WINNTERMANIA',
+        description: '',
+        artist: 'winnterzuko',
+      },
+      {
+        src: likedSongs,
+        title: 'Daily Mix 2',
+        description: 'Népal, Dinos, La Fève and more',
+        artist: '',
+      },
+      {
+        src: likedSongs,
+        title: 'Daily Mix 7',
+        description: 'Lomepal, Orelsan, Columbine and more',
+        artist: '',
+      },
+      {
+        src: likedSongs,
+        title: 'Release Radar',
+        description: 'Catch all the latest music from artist you like',
+        artist: '',
+      },
+    ],
+  },
+]
+
+// Panel Size
+export const PANEL_SIZE = {
+  default: 20,
+  min: 4,
+  small: 10,
+  medium: 15,
+  large: 25,
+  max: 78,
+}
+
+// Icon
+export const ICON_SIZE = 24
+
+// Color
+export const TEXT_GRAY_500 = '#a7a6a7'
+
+export const MenuList = [
+  { route: '/', name: 'Home', Icon: <Home /> },
+  { route: '/search', name: 'search', Icon: <Search /> },
+]
+
+export const sidebarList = [
+  {
+    src: likedSongs,
+    title: 'Liked Songs',
+    type: 'Playlist',
+    isPinned: true,
+  },
+  {
+    src: yourEpisodes,
+    title: 'Your Episodes',
+    type: 'Saved & downloaded episodes',
+    isPinned: true,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eba7f9118d82700a41c3b3d82d',
+    title: 'Bitume Caviar (Vol.1)',
+    type: 'Album • ISHA',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    type: 'Album • Deen Burbigo',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    type: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    type: 'Album • Kaozed',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011ebff32827efb25248cd37819e1',
+    title: 'Trix City 2',
+    type: 'Album • Diddi Trix',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb729099a8ed5ab9795eee1c9d',
+    title: 'JAAFAR',
+    type: 'Album • Rounhaa',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
+    title: 'Henri Bleu',
+    type: 'Artiste',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    type: 'Album • Deen Burbigo',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    type: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    type: 'Album • Kaozed',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
+    title: 'Henri Bleu',
+    type: 'Artiste',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
+    title: 'Henri Bleu',
+    type: 'Artiste',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    type: 'Album • Deen Burbigo',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    type: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    type: 'Album • Kaozed',
+    isPinned: false,
+  },
+]
+
+export const FooterLinks = [
+  {
+    title: 'Company',
+    links: [
+      { name: 'About', link: '#' },
+      { name: 'Jobs', link: '#' },
+      { name: 'For the Record', link: '#' },
+    ],
+  },
+  {
+    title: 'Communities',
+    links: [
+      { name: 'For Artists', link: '#' },
+      { name: 'Developers', link: '#' },
+      { name: 'Advertising', link: '#' },
+      { name: 'Investors', link: '#' },
+      { name: 'Vendors', link: '#' },
+    ],
+  },
+  {
+    title: 'Useful links',
+    links: [
+      { name: 'Support', link: '#' },
+      { name: 'Free Mobile App', link: '#' },
+    ],
+  },
+  {
+    title: 'Spotify Plans',
+    links: [
+      { name: 'Premium Individual', link: '#' },
+      { name: 'Premium Duo', link: '#' },
+      { name: 'Premium Family', link: '#' },
+      { name: 'Premium Student', link: '#' },
+      { name: 'Spotify Free', link: '#' },
+    ],
+  },
+]
+
 export const browseList = [
   {
     imageURL:

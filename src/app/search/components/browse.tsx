@@ -1,5 +1,5 @@
+import { browseList } from '@/app/const'
 import Image from 'next/image'
-import { browseList } from '../const'
 
 function GridItem({
   item,

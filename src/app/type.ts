@@ -7,8 +7,12 @@ export interface PlaylistItem {
   artist: string,  
 }
 
-
 export interface Playlist {
   name: string,
   items: PlaylistItem[],
+}
+
+export interface Link {
+  name:string,
+  url:string
 }

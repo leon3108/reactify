@@ -20,15 +20,15 @@ export default function Volume({
   return (
     <section className="flex w-1/3 items-center justify-end px-6">
       <div className="flex w-1/2 justify-end space-x-1 pl-10 pr-2">
-        {volume == 0 ? 
-        <VolumeX onClick={handleMutePlay} />
-        :
-      <Volume2 onClick={handleMutePlay} />
-      }
+        {volume == 0 ? (
+          <VolumeX onClick={handleMutePlay} />
+        ) : (
+          <Volume2 onClick={handleMutePlay} />
+        )}
         <Slider
           defaultValue={[volume]}
           value={[volume]}
-          onValueChange={(volume) => setVolume(volume[0])}
+          onValueChange={(value) => setVolume(value[0])}
         />
       </div>
     </section>

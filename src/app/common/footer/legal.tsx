@@ -1,4 +1,4 @@
-import { Link } from '../type/link'
+import { Link } from '../../type'
 
 const LegalList: Link[] = [
   { name: 'Legal', url: '#' },

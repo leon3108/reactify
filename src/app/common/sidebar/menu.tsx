@@ -1,8 +1,8 @@
+import { MenuList, PANEL_SIZE } from '@/app/const'
 import { cn } from '@/lib/utils'
 import { Card, CardContent } from '@/ui/card'
 import React from 'react'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { MenuList, PANEL_SIZE } from './const'
 import MenuItem from './menu-item'
 
 export default function Menu({

@@ -1,10 +1,10 @@
 'use client'
 
+import { PANEL_SIZE } from '@/app/const'
 import { ResizablePanel } from '@/ui/resizable'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { PANEL_SIZE } from './const'
 import Menu from './menu'
 import YourLibrary from './your-library'
 

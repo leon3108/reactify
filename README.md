@@ -39,72 +39,22 @@ pnpm i
 pnpm run dev
 ```
 
-
-~~made-for-user.tsx vide~~
-
-~~list dans good-mornings à dégager~~
-    ~~renommer list de quoi~~
-
-reccommendations.tsx :
-const lists: Playlist[]
-type PlaylistElement = {
-  src: StaticImageData | string
-  title: string
-  description: string
-  artist: string
-}
-
-type Playlist = {
-  name: string
-  elements: PlaylistElement[]
-}
-
 element dans une liste à séparer dans un fichier
 
-~~mettre item à la place de item.src etc...~~
-
-~~items à la place d'elements~~
-
-~~filter.tsx mapper pour afficher les badges~~
-
-~~playerFooter changer de nom~~
-
-~~footer-legal map~~
-
-~~footer-link => create type link~~
-
-~~search Footer rename en footer~~
-
 page.tsx navbar; children pour afficher l'input ?
-
-~~navbar text rename en searchText~~
-
-~~player.tsx supprimer les comments et passer l'url du song en const~~
 
 handleKeywdown créer un custom Hook pour play/Pause
 
 player.tsx audioRef.current mettre dans un state ?
 
-
-~~formatTime le mettre dans utils~~
-tester formatTime
-
-~~PlayerFooter mettre section~~
-
-volume.tsx rename volume 
+~~volume.tsx rename volume ~~
 
 const.ts typer sidebarlist
 
 mettre toutes les "fakes" données provenant de serveur dans un dossier data
 
-~~filterbytype map~~
-
 libraryList changer contextMenuTrigger
 panelRef.current passer en const, pareil dans menu.tsx
-
-
-menu.tsx refactor
-
 
 changer images.domains
 
