@@ -5,7 +5,7 @@ import CurrentSong from './current-song'
 import Player from './player'
 import Volume from './volume'
 
-export default function PlayerFooter() {
+export default function PlayerBar() {
   const [volume, setVolume] = useState(50)
   return (
     <footer className="flex h-20 w-full justify-between ">

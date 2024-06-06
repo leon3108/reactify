@@ -1,4 +1,4 @@
-import Footer from '@/app/common/playerFooter/playerFooter'
+import PlayerBar from '@/app/common/playerBar/player-bar'
 import SideBar from '@/app/common/sidebar/sidebar'
 import { ThemeProvider } from '@/app/theme-provider'
 import {
@@ -39,7 +39,7 @@ export default function RootLayout({
                 <ResizableHandle className="w-2 bg-background" />
                 <ResizablePanel>{children}</ResizablePanel>
               </ResizablePanelGroup>
-              <Footer />
+              <PlayerBar />
             </div>
           </CurrentSongProvider>
         </ThemeProvider>
