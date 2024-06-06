@@ -1,3 +1,4 @@
+import { ICON_SIZE, PANEL_SIZE } from '@/app/const'
 import { cn } from '@/lib/utils'
 import {
   ContextMenu,
@@ -7,7 +8,6 @@ import {
 } from '@/ui/context-menu'
 import { Library, Music, Plus } from 'lucide-react'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { ICON_SIZE, PANEL_SIZE } from './const'
 
 export default function Title({
   panelRef,

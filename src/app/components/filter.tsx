@@ -2,8 +2,7 @@
 
 import { Badge } from '@/ui/badge'
 import { useState } from 'react'
-
-const BadgeList = ['All', 'Music', 'Podcasts']
+import { BadgeList } from '../const'
 
 export default function Filter() {
   const [filter, setFilter] = useState('All')

@@ -1,4 +1,4 @@
-import { FooterLinks } from '@/app/components/const'
+import { FooterLinks } from '@/app/const'
 import { Facebook, Instagram, Twitter } from 'lucide-react'
 
 export default function Links() {

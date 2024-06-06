@@ -16,3 +16,13 @@ export interface Link {
   name:string,
   url:string
 }
+
+export interface Song {
+  imageUrl: string | StaticImageData
+  artistName: string
+  songName: string
+}
+export interface Item {
+  src: string | StaticImageData
+  title: string
+}

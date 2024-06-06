@@ -1,25 +1,5 @@
+import { RecentsSearchesList } from '@/app/const'
 import Image from 'next/image'
-
-const RecentsSearchesList = [
-  {
-    imageUrl:
-      '	https://i.scdn.co/image/ab676161000051746f36a5179d65c8d74a23a866',
-    title: 'Zinée',
-    description: 'Artist',
-  },
-  {
-    imageUrl:
-      'https://i.scdn.co/image/ab67616d00001e02d726484fcdb087409ded0765',
-    title: 'Imad',
-    description: '2024 - THEODORT',
-  },
-  {
-    imageUrl:
-      '	https://i.scdn.co/image/ab67656300005f1fc00fedcb8fcbf8a448d6c4d2',
-    title: 'Popcorn',
-    description: 'DomingoTV',
-  },
-]
 
 export default function RecentsSearches() {
   return (

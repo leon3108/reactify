@@ -1,13 +1,4 @@
-import { Link } from '../../type'
-
-const LegalList: Link[] = [
-  { name: 'Legal', url: '#' },
-  { name: 'Safety & Privacy Center', url: '#' },
-  { name: 'Privacy Policy', url: '#' },
-  { name: 'Cookie Settings', url: '#' },
-  { name: 'About Ads', url: '#' },
-  { name: 'Accessibility', url: '#' },
-]
+import { LegalList } from '@/app/const'
 
 export default function Legal() {
   return (

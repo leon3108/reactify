@@ -1,3 +1,4 @@
+import { PANEL_SIZE, sidebarList } from '@/app/const'
 import { cn } from '@/lib/utils'
 import {
   ContextMenu,
@@ -13,7 +14,6 @@ import { ScrollArea } from '@/ui/scroll-area'
 import { Pin } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import { ImperativePanelHandle } from 'react-resizable-panels'
-import { PANEL_SIZE, sidebarList } from './const'
 
 function LibraryItem({
   src,

@@ -1,11 +1,5 @@
-import { StaticImageData } from 'next/image'
+import { Song } from '@/app/type'
 import { createContext } from 'react'
-
-export interface Song {
-  imageUrl: string | StaticImageData
-  artistName: string
-  songName: string
-}
 
 export interface CurrentSongContextProps {
   currentSong: Song
