@@ -3,136 +3,13 @@
 import { Button } from '@/ui/button'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/ui/card'
 import { Play } from 'lucide-react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { useContext } from 'react'
 import { CurrentSongContext } from '../common/context/current-song'
-import likedSongs from '/public/liked-songs-300.png'
+import { PlaylistItem } from '../common/type/playlist'
+import { RecommendationsList } from './const'
 
-const lists = [
-  {
-    name: 'Made for Leon',
-    elements: [
-      {
-        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb34925ec32cd90699e1021914/1/en/default',
-        title: 'Daily Mix 1',
-        description: 'B.B Jacques, Népal, Lujipeka and more',
-        artist: '',
-      },
-      {
-        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb92f66833fe2a9a854f888042/2/en/default',
-        title: 'Daily Mix 2',
-        description: 'Laylow, Luidji, Zinée and more',
-        artist: '',
-      },
-      {
-        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb2b550c4ab38ac680700abc42/3/en/default',
-        title: 'Daily Mix 3',
-        description: 'Malo, Jwles, Luther and more',
-        artist: '',
-      },
-      {
-        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb976140e777ab37c7f262a910/4/en/default',
-        title: 'Daily Mix 4',
-        description: 'Dinos, Lomepal, Lefa and more',
-        artist: '',
-      },
-      {
-        src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb400bb60cc514557fcf3c06a7/5/en/default',
-        title: 'Daily Mix 5',
-        description: 'Envy, Thimajin, Fredz and more',
-        artist: '',
-      },
-      {
-        src: 'https://newjams-images.scdn.co/image/ab67647800003f8a/dt/v3/release-radar/ab6761610000e5eb2edc26862c486859b32591bb/en',
-        title: 'Release Radar',
-        description: 'Catch all the latest music from artist you like',
-        artist: '',
-      },
-    ],
-  },
-  {
-    name: 'Jump back in',
-    elements: [
-      {
-        src: '	https://i.scdn.co/image/ab67616d00001e029f16b4e122ad65083b02d659',
-        title: 'Osmin',
-        description: '',
-        artist: 'Zinée',
-      },
-      {
-        src: 'https://i.scdn.co/image/ab67616d00001e028bf2a471579eed48772f5b1e',
-        title: 'Cannelloni',
-        description: '',
-        artist: 'SCH',
-      },
-      {
-        src: '	https://i.scdn.co/image/ab67616d00001e02701a315dea23417e89e72707',
-        title: 'M1NDSET',
-        description: '',
-        artist: 'Take a Mic',
-      },
-    ],
-  },
-  {
-    name: 'Recently played',
-    elements: [
-      {
-        src: 'https://i.scdn.co/image/ab67616d00001e02b629878b4e36e9937d5a452e',
-        title: 'garder le sourire',
-        description: 'arøne',
-        artist: '',
-      },
-      {
-        src: 'https://i.scdn.co/image/ab67616d00001e02ad9f89c7cd76f76eb0c1fc3e',
-        title: 'Cyborg',
-        description: '',
-        artist: 'Nekfeu',
-      },
-      {
-        src: 'https://i.scdn.co/image/ab67616d00001e02d17080d3e3b8706f2147341d',
-        title: "L'Amour",
-        description: '',
-        artist: 'Disiz',
-      },
-      {
-        src: 'https://i.scdn.co/image/ab67616d00001e02805ae6e215ce80d74f51329b',
-        title: 'WINNTERMANIA',
-        description: '',
-        artist: 'winnterzuko',
-      },
-      {
-        src: likedSongs,
-        title: 'Daily Mix 2',
-        description: 'Népal, Dinos, La Fève and more',
-        artist: '',
-      },
-      {
-        src: likedSongs,
-        title: 'Daily Mix 7',
-        description: 'Lomepal, Orelsan, Columbine and more',
-        artist: '',
-      },
-      {
-        src: likedSongs,
-        title: 'Release Radar',
-        description: 'Catch all the latest music from artist you like',
-        artist: '',
-      },
-    ],
-  },
-]
-
-function Element({
-  src,
-  title,
-  description,
-  artist,
-}: {
-  src: StaticImageData | string
-  title: string
-  description: string
-  artist: string
-}) {
+function Item({ src, title, description, artist }: PlaylistItem) {
   const currentSongContext = useContext(CurrentSongContext)
   const handleClick = () => {
     if (currentSongContext == null) return
@@ -187,18 +64,12 @@ function PlaylistHeader({ name }: { name: string }) {
 export default function Recommendations() {
   return (
     <section className="">
-      {lists.map((list, index) => (
+      {RecommendationsList.map((playlist, index) => (
         <div key={index}>
-          <PlaylistHeader name={list.name} />
+          <PlaylistHeader name={playlist.name} />
           <div className="flex w-full space-x-1">
-            {list.elements.map((item, index) => (
-              <Element
-                key={index}
-                src={item.src}
-                artist={item.artist}
-                description={item.description}
-                title={item.title}
-              />
+            {playlist.items.map((item, index) => (
+              <Item key={index} {...item} />
             ))}
           </div>
         </div>

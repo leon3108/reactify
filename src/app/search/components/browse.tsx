@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { browseList } from '../const'
 
-function GridElement({
+function GridItem({
   item,
 }: {
   item: { imageURL: string; name: string; color: string }
@@ -31,7 +31,7 @@ export default function Browse() {
       <h3 className="text-xl font-extrabold">Browse All</h3>
       <div className="grid grid-cols-5 gap-4">
         {browseList.map((item) => (
-          <GridElement item={item} key={item.name} />
+          <GridItem item={item} key={item.name} />
         ))}
       </div>
     </section>

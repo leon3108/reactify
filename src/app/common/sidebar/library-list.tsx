@@ -11,7 +11,7 @@ import Image, { StaticImageData } from 'next/image'
 import { ImperativePanelHandle } from 'react-resizable-panels'
 import { PANEL_SIZE, sidebarList } from './const'
 
-function LibraryElement({
+function LibraryItem({
   src,
   title,
   type,
@@ -76,7 +76,7 @@ export default function LibraryList({
     <section className="flex flex-col space-y-2 overflow-hidden">
       <ScrollArea>
         {sidebarList.map((item, index) => (
-          <LibraryElement
+          <LibraryItem
             key={index}
             src={item.src}
             title={item.title}

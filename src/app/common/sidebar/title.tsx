@@ -44,12 +44,12 @@ export default function Title({
           <Library className="stroke-grey-500" size={ICON_SIZE} />
           {showText && <p className="font-bold text-grey-500">Your library</p>}
         </ContextMenuTrigger>
-        <ContextMenuContent className="bg-grey-100 w-48">
-          <ContextMenuItem inset className="hover:bg-grey-200 space-x-3">
+        <ContextMenuContent className="w-48 bg-grey-100">
+          <ContextMenuItem inset className="space-x-3 hover:bg-grey-200">
             <Music />
             <p>Create playlist</p>
           </ContextMenuItem>
-          <ContextMenuItem inset className="hover:bg-grey-200 space-x-3">
+          <ContextMenuItem inset className="space-x-3 hover:bg-grey-200">
             <Plus />
             <p>Create folder</p>
           </ContextMenuItem>
