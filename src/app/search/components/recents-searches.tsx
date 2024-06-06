@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-// playlist, albums, single, podcats
 const RecentsSearchesList = [
   {
     imageUrl:

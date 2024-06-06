@@ -8,10 +8,10 @@ import Volume from './volume'
 export default function PlayerBar() {
   const [volume, setVolume] = useState(50)
   return (
-    <footer className="flex h-20 w-full justify-between ">
+    <section className="flex h-20 w-full justify-between ">
       <CurrentSong />
       <Player volume={volume} />
       <Volume volume={volume} setVolume={setVolume} />
-    </footer>
+    </section>
   )
 }

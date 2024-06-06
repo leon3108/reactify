@@ -3,6 +3,10 @@ import {
   ContextMenu,
   ContextMenuContent,
   ContextMenuItem,
+  ContextMenuSeparator,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
   ContextMenuTrigger,
 } from '@/ui/context-menu'
 import { ScrollArea } from '@/ui/scroll-area'
@@ -58,10 +62,31 @@ function LibraryItem({
         </div>
       </ContextMenuTrigger>
       <ContextMenuContent>
-        <ContextMenuItem>Profile</ContextMenuItem>
-        <ContextMenuItem>Billing</ContextMenuItem>
-        <ContextMenuItem>Team</ContextMenuItem>
-        <ContextMenuItem>Subscription</ContextMenuItem>
+        <ContextMenuItem>Remove from Your Library</ContextMenuItem>
+        <ContextMenuItem>Add to queue</ContextMenuItem>
+        <ContextMenuItem>Go to artist radio</ContextMenuItem>
+        <ContextMenuSeparator></ContextMenuSeparator>
+        <ContextMenuItem>Pin Album</ContextMenuItem>
+        <ContextMenuSub>
+          <ContextMenuSubTrigger>Add to playlist</ContextMenuSubTrigger>
+          <ContextMenuSubContent className="w-48">
+            <ContextMenuItem>Find a playlist</ContextMenuItem>
+            <ContextMenuItem>New playlist</ContextMenuItem>
+            <ContextMenuSeparator></ContextMenuSeparator>
+            <ContextMenuItem>playlist 1</ContextMenuItem>
+            <ContextMenuItem>playlist 2</ContextMenuItem>
+          </ContextMenuSubContent>
+        </ContextMenuSub>
+        <ContextMenuSeparator></ContextMenuSeparator>
+        <ContextMenuSub>
+          <ContextMenuSubTrigger>Share</ContextMenuSubTrigger>
+          <ContextMenuSubContent className="w-48">
+            <ContextMenuItem>Copy Spotify URI</ContextMenuItem>
+            <ContextMenuItem>Embed album</ContextMenuItem>
+          </ContextMenuSubContent>
+        </ContextMenuSub>
+        <ContextMenuSeparator></ContextMenuSeparator>
+        <ContextMenuItem>Open in Desktop app</ContextMenuItem>
       </ContextMenuContent>
     </ContextMenu>
   )

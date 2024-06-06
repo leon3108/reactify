@@ -14,9 +14,8 @@ import { useEffect, useRef, useState } from 'react'
 export default function Player({ volume }: { volume: number }) {
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
-  const [audioUrl, setAudioUrl] = useState(
-    'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
-  )
+  const audioUrl =
+    'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [playerValue, setPlayerValue] = useState(0)
@@ -24,15 +23,6 @@ export default function Player({ volume }: { volume: number }) {
   if (audioRef.current != null) {
     audioRef.current.volume = volume / 100
   }
-
-  // useEffect(() => {
-  //   const fetchAudioUrl = async () => {
-  //     const response = await fetch('/api/song')
-  //     const data = await response.json()
-  //     setAudioUrl(data.url)
-  //   }
-  //   fetchAudioUrl()
-  // }, [])
 
   useEffect(() => {
     if (audioUrl) {

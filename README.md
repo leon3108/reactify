@@ -77,9 +77,9 @@ element dans une liste à séparer dans un fichier
 
 page.tsx navbar; children pour afficher l'input ?
 
-navbar text rename en searchText
+~~navbar text rename en searchText~~
 
-player.tsx supprimer les comments et passer l'url du song en const
+~~player.tsx supprimer les comments et passer l'url du song en const~~
 
 handleKeywdown créer un custom Hook pour play/Pause
 
@@ -89,16 +89,15 @@ player.tsx audioRef.current mettre dans un state ?
 formatTime le mettre dans utils
     le tester aussi
 
-PlayerFooter mettre section
+~~PlayerFooter mettre section~~
 
 volume.tsx rename volume 
 
 const.ts typer sidebarlist
 
-
 mettre toutes les "fakes" données provenant de serveur dans un dossier data
 
-filterbytype map
+~~filterbytype map~~
 
 libraryList changer contextMenuTrigger
 panelRef.current passer en const, pareil dans menu.tsx

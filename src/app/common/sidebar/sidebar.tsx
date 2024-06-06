@@ -13,11 +13,9 @@ export default function Sidebar() {
   const panelRef = useRef<ImperativePanelHandle>(null)
 
   const handleResize = (size: number) => {
-    // si la taille <= 7,5 on met 5
     if (size <= PANEL_SIZE.small) {
       panelRef.current?.resize(PANEL_SIZE.min)
     }
-    // si la taille est > à 7,5 et < 10 on met à 10
     if (size > PANEL_SIZE.small && size < PANEL_SIZE.medium) {
       panelRef.current?.resize(PANEL_SIZE.medium)
     }
