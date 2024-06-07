@@ -56,8 +56,6 @@ mettre toutes les "fakes" données provenant de serveur dans un dossier data
 libraryList changer contextMenuTrigger
 panelRef.current passer en const, pareil dans menu.tsx
 
-changer images.domains
+~~changer images.domains~~
 
 cursor-pointer
-
-images.domains

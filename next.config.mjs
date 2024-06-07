@@ -1,13 +1,43 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      'i.scdn.co',
-      'dailymix-images.scdn.co',
-      'newjams-images.scdn.co',
-      'concerts.spotifycdn.com',
-      't.scdn.co',
-      'charts-images.scdn.co'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dailymix-images.scdn.co',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'newjams-images.scdn.co',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'concerts.spotifycdn.com',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 't.scdn.co',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'charts-images.scdn.co',
+        port: '',
+        pathname: '**',
+      },
     ],
   }
 };
