@@ -9,9 +9,9 @@ export default function SearchinMyLib() {
         variant={'secondary'}
         className="h-8 w-8 rounded-full border-none bg-card hover:bg-badge"
       >
-        <Search className="stroke-grey-500 hover:stroke-white" size={20}/>
+        <Search className="stroke-grey-500 hover:stroke-white" size={20} />
       </Button>
-      <div className="group flex space-x-2">
+      <div className="group flex cursor-pointer items-center space-x-2">
         <p className=" text-sm font-semibold text-grey-500 group-hover:text-white">
           Recents
         </p>

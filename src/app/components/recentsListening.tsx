@@ -22,7 +22,7 @@ export default function RecentsListening({
     })
   }
   return (
-    <div className="group relative flex h-12 w-full items-center space-x-2 rounded-sm bg-[#FFFFFF12] hover:bg-[#FFFFFF33] lg:h-16 xl:h-20">
+    <div className="group relative flex h-12 w-full cursor-pointer items-center space-x-2 rounded-sm bg-[#FFFFFF12] hover:bg-[#FFFFFF33] lg:h-16 xl:h-20">
       <Image
         src={imageUrl}
         alt="cover image"

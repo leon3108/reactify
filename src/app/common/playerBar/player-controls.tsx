@@ -1,3 +1,4 @@
+import { Button } from '@/ui/button'
 import {
   CirclePause,
   CirclePlay,
@@ -6,26 +7,40 @@ import {
   SkipBack,
   SkipForward,
 } from 'lucide-react'
-import React from 'react'
 
 type PlayerControlsProps = {
   isPlaying: boolean
   playPause: () => void
 }
 
-const PlayerControls: React.FC<PlayerControlsProps> = ({
+export default function PlayerControls({
   isPlaying,
   playPause,
-}) => (
-  <div className="flex space-x-4">
-    <Shuffle />
-    <SkipBack />
-    <button onClick={playPause}>
-      {isPlaying ? <CirclePause /> : <CirclePlay />}
-    </button>
-    <SkipForward />
-    <Repeat2 />
-  </div>
-)
+}: PlayerControlsProps) {
+  const PlayerControlsList = [
+    { icon: <Shuffle />, label: 'Shuffle', onClick: () => {} },
+    { icon: <SkipBack />, label: 'Skip Back', onClick: () => {} },
+    {
+      icon: isPlaying ? <CirclePause /> : <CirclePlay />,
+      label: 'Play',
+      onClick: playPause,
+    },
+    { icon: <SkipForward />, label: 'Skip Forward', onClick: () => {} },
+    { icon: <Repeat2 />, label: 'Repeat', onClick: () => {} },
+  ]
 
-export default PlayerControls
+  return (
+    <div className="flex space-x-3">
+      {PlayerControlsList.map((Control) => (
+        <Button
+          size={'icon'}
+          variant={'link'}
+          onClick={Control.onClick}
+          key={Control.label}
+        >
+          {Control.icon}
+        </Button>
+      ))}
+    </div>
+  )
+}

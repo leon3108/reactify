@@ -4,7 +4,7 @@ import PlaylistItem from './playlist-item'
 
 export default function Recommendations() {
   return (
-    <section className="">
+    <section className="mt-16">
       {RecommendationsList.map((playlist, index) => (
         <div key={index}>
           <PlaylistHeader name={playlist.name} />

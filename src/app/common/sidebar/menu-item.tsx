@@ -18,7 +18,7 @@ export default function MenuItem({
   return (
     <Link
       href={route}
-      className={`${pathname == route ? 'text-white ' : 'text-gray-500 '} flex space-x-2 font-bold`}
+      className={`${pathname == route ? 'text-white ' : 'text-gray-500 '} flex cursor-pointer space-x-2 font-bold`}
     >
       {Icon &&
         cloneElement(Icon, {

@@ -4,7 +4,7 @@ import { Badge } from '@/ui/badge'
 export default function FilterByType({}: {}) {
   return (
     <section
-      className="flex h-20 space-x-2 overflow-x-auto"
+      className="flex h-12 space-x-2 overflow-x-auto"
       style={{ scrollbarWidth: 'none' }}
     >
       {MusicType.map((badge) => (

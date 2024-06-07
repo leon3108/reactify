@@ -24,7 +24,7 @@ export default function PlaylistItem({
   }
 
   return (
-    <Card className="group h-80 w-56 border-none">
+    <Card className="group h-80 w-56 cursor-pointer border-none">
       <CardHeader>
         <CardTitle className="text-base font-semibold text-white">
           <div className="relative">
@@ -37,7 +37,7 @@ export default function PlaylistItem({
             />
             <div className="absolute bottom-2 right-4 h-12 w-12 rounded-full bg-spotify p-2 opacity-0 group-hover:opacity-100">
               <Play
-                className="h-8 w-8 fill-black-500 stroke-black-500 p-2"
+                className="h-8 w-8 cursor-pointer fill-black-500 stroke-black-500 p-2"
                 onClick={handleClick}
               />
             </div>

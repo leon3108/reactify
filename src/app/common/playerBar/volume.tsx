@@ -21,9 +21,9 @@ export default function Volume({
     <section className="flex w-1/3 items-center justify-end px-6">
       <div className="flex w-1/2 justify-end space-x-1 pl-10 pr-2">
         {volume == 0 ? (
-          <VolumeX onClick={handleMutePlay} />
+          <VolumeX onClick={handleMutePlay} className="cursor-pointer" />
         ) : (
-          <Volume2 onClick={handleMutePlay} />
+          <Volume2 onClick={handleMutePlay} className="cursor-pointer" />
         )}
         <Slider
           defaultValue={[volume]}

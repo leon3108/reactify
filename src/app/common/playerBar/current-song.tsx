@@ -26,11 +26,15 @@ export default function CurrentSong() {
         )}
       </div>
       <div className="flex flex-col justify-center">
-        <p>{currentSongContext.currentSong.songName}</p>
-        <p>{currentSongContext.currentSong.artistName}</p>
+        <p className="w-fit cursor-pointer hover:underline">
+          {currentSongContext.currentSong.songName}
+        </p>
+        <p className="w-fit cursor-pointer text-xs text-grey-500 hover:underline">
+          {currentSongContext.currentSong.artistName}
+        </p>
       </div>
       <div className="flex items-center justify-center">
-        <CircleCheck className="fill-spotify stroke-black-500" />
+        <CircleCheck className="cursor-pointer fill-spotify stroke-background" />
       </div>
     </section>
   )

@@ -22,7 +22,7 @@ export default function Sidebar() {
     size >= PANEL_SIZE.large
       ? setArrow(
           <MoveLeft
-            className="stroke-grey-500"
+            className="cursor-pointer stroke-grey-500"
             onClick={() => {
               panelRef.current?.resize(PANEL_SIZE.medium)
             }}
@@ -30,7 +30,7 @@ export default function Sidebar() {
         )
       : setArrow(
           <MoveRight
-            className="stroke-grey-500"
+            className="cursor-pointer stroke-grey-500"
             onClick={() => {
               panelRef.current?.resize(PANEL_SIZE.large)
             }}

@@ -33,7 +33,7 @@ export default function LibraryItem({
     <ContextMenu>
       <ContextMenuTrigger
         className={cn(
-          'flex space-x-2 rounded-lg p-2 hover:bg-[#1a1a1a]',
+          'flex cursor-pointer space-x-2 rounded-lg p-2 hover:bg-[#1a1a1a]',
           panelSizeBiggerThanSmall ? '' : 'justify-center',
         )}
       >

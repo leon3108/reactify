@@ -38,11 +38,18 @@ export default function Title({
     >
       <ContextMenu>
         <ContextMenuTrigger
-          className="my-4 flex hover:cursor-pointer"
+          className="group my-4 flex hover:cursor-pointer"
           onClick={handleClickContextMenu}
         >
-          <Library className="stroke-grey-500" size={ICON_SIZE} />
-          {showText && <p className="font-bold text-grey-500">Your library</p>}
+          <Library
+            className="stroke-grey-500 group-hover:stroke-white"
+            size={ICON_SIZE}
+          />
+          {showText && (
+            <p className="font-bold text-grey-500 group-hover:text-white">
+              Your library
+            </p>
+          )}
         </ContextMenuTrigger>
         <ContextMenuContent className="w-48 bg-grey-100">
           <ContextMenuItem inset className="space-x-3 hover:bg-grey-200">
@@ -56,9 +63,13 @@ export default function Title({
         </ContextMenuContent>
       </ContextMenu>
       {showText ? (
-        <div className="flex items-center space-x-4">
-          <Plus className="stroke-grey-500" />
-          {arrow}
+        <div className="flex items-center space-x-3">
+          <div className="hover:bg-black-900 flex h-8 w-8 items-center justify-center rounded-full">
+            <Plus className="cursor-pointer stroke-grey-500" />
+          </div>
+          <div className="hover:bg-black-900 flex h-8 w-8 items-center justify-center rounded-full">
+            {arrow}
+          </div>
         </div>
       ) : null}
     </div>

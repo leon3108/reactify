@@ -12,10 +12,10 @@ export default function Navbar({ children }: { children?: ReactNode }) {
   return (
     <nav className="flex h-12 w-full items-center justify-between">
       <div className="flex items-center space-x-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0000008a]">
+        <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-[#0000008a]">
           <ChevronLeft className="stroke-[#b3b3b3]" />
         </div>
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0000008a]">
+        <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-[#0000008a]">
           <ChevronRight className="stroke-[#b3b3b3]" />
         </div>
         {children}
