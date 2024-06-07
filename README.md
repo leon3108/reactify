@@ -2,7 +2,7 @@
 
 You should remove ```display:table``` in ```node_modules/@radix-ui/react-scroll-area/dist/index.js``` and ```node_modules/@radix-ui/react-scroll-area/dist/index.mjs```
 
-it's beyond my control, as I write these lines shadcn/ui has a bug with this component. The ContextMenuItem alos has a bug on hover. I have already opened an issue on their repo.
+it's beyond my control, as I write these lines shadcn/ui has a bug with this component. The ContextMenuItem also has a bug on hover on background color. I have already opened an issue on their repo.
 
 
 # Reactify
@@ -75,3 +75,17 @@ If needed, I use Vercel to deploy the app and Neon to deploy db
 # To do
 
 player.logic.ts audioRef.current mettre dans un state/const ?
+
+# Improvements
+- [ ] page for each playlist/album/son with item content inside
+    - [ ] could naviguate with sidebar
+- [ ] one page to display the entire item list (ex: Made for user, Jump Back in ...)
+- [ ] display musique/podcats with the filter
+### Sidebar:
+- [ ] Implement click functionality on "Recents" to allow changing the display format:
+  - [ ] Compact view
+  - [ ] List view
+  - [ ] Grid view
+- [ ] Enable changing the order of displayed items.
+- [ ] Add an icon button with an arrow in the filter section to show the rest of the filters.
+- [ ] When expanding the sidebar, add a second "limit" size option.
