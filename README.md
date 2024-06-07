@@ -74,8 +74,6 @@ If needed, I use Vercel to deploy the app and Neon to deploy db
 
 # To do
 
-handleKeywdown créer un custom Hook pour play/Pause
-
 player.tsx voir comment changer le js, mettre dans un hook, fichier ?
 
 player.tsx audioRef.current mettre dans un state ?

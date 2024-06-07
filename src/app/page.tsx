@@ -6,7 +6,7 @@ import usePreventSpaceScroll from './common/hooks/use-prevent-space-scroll'
 import Navbar from './common/navbar'
 import Filter from './components/filter'
 import GoodMorning from './components/good-morning'
-import Recommendations from './components/recommendations'
+import Recommendations from './components/recommendations/recommendations'
 
 export default function Home() {
   usePreventSpaceScroll()

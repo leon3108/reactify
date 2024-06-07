@@ -10,7 +10,7 @@ export interface GroupLinks {
   links: Link[],
 }
 
-export interface PlaylistItem {
+export interface PlaylistItemType {
   src:string | StaticImageData,
   title: string,
   description: string,
@@ -19,7 +19,7 @@ export interface PlaylistItem {
 
 export interface PlaylistCollection {
   name: string,
-  items: PlaylistItem[],
+  items: PlaylistItemType[],
 }
 
 export interface Song {

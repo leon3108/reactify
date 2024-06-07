@@ -1,15 +1,18 @@
 'use client'
 
-import { Button } from '@/ui/button'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/ui/card'
 import { Play } from 'lucide-react'
 import Image from 'next/image'
 import { useContext } from 'react'
-import { CurrentSongContext } from '../common/context/current-song'
-import { RecommendationsList } from '../data'
-import { PlaylistItem } from '../type'
+import { CurrentSongContext } from '../../common/context/current-song'
+import { PlaylistItemType } from '../../type'
 
-function Item({ src, title, description, artist }: PlaylistItem) {
+export default function PlaylistItem({
+  src,
+  title,
+  description,
+  artist,
+}: PlaylistItemType) {
   const currentSongContext = useContext(CurrentSongContext)
   const handleClick = () => {
     if (currentSongContext == null) return
@@ -47,33 +50,5 @@ function Item({ src, title, description, artist }: PlaylistItem) {
         </CardDescription>
       </CardHeader>
     </Card>
-  )
-}
-
-function PlaylistHeader({ name }: { name: string }) {
-  return (
-    <div className="flex items-center justify-between">
-      <h3 className="text-2xl font-bold">{name}</h3>
-      <Button variant="link" className="font-semibold">
-        Show all
-      </Button>
-    </div>
-  )
-}
-
-export default function Recommendations() {
-  return (
-    <section className="">
-      {RecommendationsList.map((playlist, index) => (
-        <div key={index}>
-          <PlaylistHeader name={playlist.name} />
-          <div className="flex w-full space-x-1">
-            {playlist.items.map((item, index) => (
-              <Item key={index} {...item} />
-            ))}
-          </div>
-        </div>
-      ))}
-    </section>
   )
 }

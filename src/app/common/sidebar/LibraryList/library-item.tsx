@@ -1,5 +1,4 @@
 import { PANEL_SIZE } from '@/app/const'
-import { sidebarList } from '@/app/data'
 import { cn } from '@/lib/utils'
 import {
   ContextMenu,
@@ -11,12 +10,11 @@ import {
   ContextMenuSubTrigger,
   ContextMenuTrigger,
 } from '@/ui/context-menu'
-import { ScrollArea } from '@/ui/scroll-area'
 import { Pin } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import { ImperativePanelHandle } from 'react-resizable-panels'
 
-function LibraryItem({
+export default function LibraryItem({
   imageUrl,
   title,
   description,
@@ -90,21 +88,5 @@ function LibraryItem({
         <ContextMenuItem>Open in Desktop app</ContextMenuItem>
       </ContextMenuContent>
     </ContextMenu>
-  )
-}
-
-export default function LibraryList({
-  panelRef,
-}: {
-  panelRef: React.RefObject<ImperativePanelHandle>
-}) {
-  return (
-    <section className="flex flex-col space-y-2 overflow-hidden">
-      <ScrollArea>
-        {sidebarList.map((item, index) => (
-          <LibraryItem key={index} {...item} panelRef={panelRef} />
-        ))}
-      </ScrollArea>
-    </section>
   )
 }
