@@ -1,11 +1,11 @@
 # ⚠️⚠️ IMPORTANT ⚠️⚠️ 
 
-You should remove ```display:table``` in ```node_modules/@radix-ui/react-scroll-area/dist/index.js``` and ```/home/leon/work/spotiflex/node_modules/@radix-ui/react-scroll-area/dist/index.mjs```
+You should remove ```display:table``` in ```node_modules/@radix-ui/react-scroll-area/dist/index.js``` and ```node_modules/@radix-ui/react-scroll-area/dist/index.mjs```
 
 it's beyond my control, as I write these lines shadcn/ui has a bug with this component. The ContextMenuItem alos has a bug on hover. I have already opened an issue on their repo.
 
 
-# Spotiflex
+# Reactify
 
 
 ## Description
