@@ -9,7 +9,7 @@ export default function FilterByType({}: {}) {
       style={{ scrollbarWidth: 'none' }}
     >
       {BadgeList.map((badge) => (
-        <Badge variant={'secondary'} className="h-7 text-nowrap">
+        <Badge variant={'secondary'} className="h-7 text-nowrap" key={badge}>
           {badge}
         </Badge>
       ))}
