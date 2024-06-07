@@ -1,9 +1,79 @@
 import { Home, Search } from 'lucide-react'
-import { Item, Link, Playlist } from './type'
+import { GroupLinks, Item, Link, MusicGenre, PlaylistCollection } from './type'
 import likedSongs from '/public/liked-songs-300.png'
 import yourEpisodes from '/public/yourEpisodes.png'
 
-export const RecentsSearchesList = [
+export const BadgeList = ['All', 'Music', 'Podcasts']
+
+export const LegalList: Link[] = [
+  { name: 'Legal', url: '#' },
+  { name: 'Safety & Privacy Center', url: '#' },
+  { name: 'Privacy Policy', url: '#' },
+  { name: 'Cookie Settings', url: '#' },
+  { name: 'About Ads', url: '#' },
+  { name: 'Accessibility', url: '#' },
+]
+
+// Panel Size
+export const PANEL_SIZE = {
+  default: 20,
+  min: 4,
+  small: 10,
+  medium: 15,
+  large: 25,
+  max: 78,
+}
+
+// Icon
+export const ICON_SIZE = 24
+
+// Color
+export const TEXT_GRAY_500 = '#a7a6a7'
+
+export const MenuList = [
+  { route: '/', name: 'Home', Icon: <Home /> },
+  { route: '/search', name: 'search', Icon: <Search /> },
+]
+
+export const FooterLinks: GroupLinks[] = [
+  {
+    title: 'Company',
+    links: [
+      { name: 'About', url: '#' },
+      { name: 'Jobs', url: '#' },
+      { name: 'For the Record', url: '#' },
+    ],
+  },
+  {
+    title: 'Communities',
+    links: [
+      { name: 'For Artists', url: '#' },
+      { name: 'Developers', url: '#' },
+      { name: 'Advertising', url: '#' },
+      { name: 'Investors', url: '#' },
+      { name: 'Vendors', url: '#' },
+    ],
+  },
+  {
+    title: 'Useful links',
+    links: [
+      { name: 'Support', url: '#' },
+      { name: 'Free Mobile App', url: '#' },
+    ],
+  },
+  {
+    title: 'Spotify Plans',
+    links: [
+      { name: 'Premium Individual', url: '#' },
+      { name: 'Premium Duo', url: '#' },
+      { name: 'Premium Family', url: '#' },
+      { name: 'Premium Student', url: '#' },
+      { name: 'Spotify Free', url: '#' },
+    ],
+  },
+]
+
+export const RecentsSearchesList: Item[] = [
   {
     imageUrl:
       '	https://i.scdn.co/image/ab676161000051746f36a5179d65c8d74a23a866',
@@ -24,44 +94,167 @@ export const RecentsSearchesList = [
   },
 ]
 
-export const BadgeList = ['All', 'Music', 'Podcasts']
-
 export const RecentsListeninglist: Item[] = [
   {
-    src: likedSongs,
+    imageUrl: likedSongs,
     title: 'leno + Leno',
   },
   {
-    src: likedSongs,
+    imageUrl: likedSongs,
     title: 'Liked Songs',
   },
   {
-    src: 'https://i.scdn.co/image/ab67616d00001e02d726484fcdb087409ded0765',
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d00001e02d726484fcdb087409ded0765',
     title: 'Toko dombi',
   },
   {
-    src: 'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb34925ec32cd90699e1021914/1/en/default',
+    imageUrl:
+      'https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb34925ec32cd90699e1021914/1/en/default',
     title: 'Daily Mix 2',
   },
   {
-    src: 'https://i.scdn.co/image/ab67616d00001e02729099a8ed5ab9795eee1c9d',
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d00001e02729099a8ed5ab9795eee1c9d',
     title: 'JAAFAR',
   },
   {
-    src: 'https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/aAbca4VNfzWuUCQ_FGiEFA==/bmVuZW5lbmVuZW5lbmVuZQ==',
+    imageUrl:
+      'https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/aAbca4VNfzWuUCQ_FGiEFA==/bmVuZW5lbmVuZW5lbmVuZQ==',
     title: 'Discover Weekly',
   },
   {
-    src: likedSongs,
+    imageUrl: likedSongs,
     title: 'Daily Drive',
   },
   {
-    src: 'https://i.scdn.co/image/ab67616d00001e02ff32827efb25248cd37819e1',
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d00001e02ff32827efb25248cd37819e1',
     title: 'Trix city 2',
   },
 ]
 
-export const RecommendationsList: Playlist[] = [
+export const sidebarList: Item[] = [
+  {
+    imageUrl: likedSongs,
+    title: 'Liked Songs',
+    description: 'Playlist',
+    isPinned: true,
+  },
+  {
+    imageUrl: yourEpisodes,
+    title: 'Your Episodes',
+    description: 'Saved & downloaded episodes',
+    isPinned: true,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eba7f9118d82700a41c3b3d82d',
+    title: 'Bitume Caviar (Vol.1)',
+    description: 'Album • ISHA',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    description: 'Album • Deen Burbigo',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    description: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    description: 'Album • Kaozed',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011ebff32827efb25248cd37819e1',
+    title: 'Trix City 2',
+    description: 'Album • Diddi Trix',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eb729099a8ed5ab9795eee1c9d',
+    title: 'JAAFAR',
+    description: 'Album • Rounhaa',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
+    title: 'Henri Bleu',
+    description: 'Artiste',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    description: 'Album • Deen Burbigo',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    description: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    description: 'Album • Kaozed',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
+    title: 'Henri Bleu',
+    description: 'Artiste',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
+    title: 'Henri Bleu',
+    description: 'Artiste',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
+    title: 'OG SAN 1',
+    description: 'Album • Deen Burbigo',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
+    title: 'Deadly Poison Sting',
+    description: 'Album • baby hayabusa',
+    isPinned: false,
+  },
+  {
+    imageUrl:
+      'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
+    title: 'Bémol',
+    description: 'Album • Kaozed',
+    isPinned: false,
+  },
+]
+
+export const RecommendationsList: PlaylistCollection[] = [
   {
     name: 'Made for Leon',
     items: [
@@ -175,180 +368,7 @@ export const RecommendationsList: Playlist[] = [
   },
 ]
 
-export const LegalList: Link[] = [
-  { name: 'Legal', url: '#' },
-  { name: 'Safety & Privacy Center', url: '#' },
-  { name: 'Privacy Policy', url: '#' },
-  { name: 'Cookie Settings', url: '#' },
-  { name: 'About Ads', url: '#' },
-  { name: 'Accessibility', url: '#' },
-]
-
-// Panel Size
-export const PANEL_SIZE = {
-  default: 20,
-  min: 4,
-  small: 10,
-  medium: 15,
-  large: 25,
-  max: 78,
-}
-
-// Icon
-export const ICON_SIZE = 24
-
-// Color
-export const TEXT_GRAY_500 = '#a7a6a7'
-
-export const MenuList = [
-  { route: '/', name: 'Home', Icon: <Home /> },
-  { route: '/search', name: 'search', Icon: <Search /> },
-]
-
-export const sidebarList = [
-  {
-    src: likedSongs,
-    title: 'Liked Songs',
-    type: 'Playlist',
-    isPinned: true,
-  },
-  {
-    src: yourEpisodes,
-    title: 'Your Episodes',
-    type: 'Saved & downloaded episodes',
-    isPinned: true,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eba7f9118d82700a41c3b3d82d',
-    title: 'Bitume Caviar (Vol.1)',
-    type: 'Album • ISHA',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
-    title: 'OG SAN 1',
-    type: 'Album • Deen Burbigo',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
-    title: 'Deadly Poison Sting',
-    type: 'Album • baby hayabusa',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
-    title: 'Bémol',
-    type: 'Album • Kaozed',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011ebff32827efb25248cd37819e1',
-    title: 'Trix City 2',
-    type: 'Album • Diddi Trix',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eb729099a8ed5ab9795eee1c9d',
-    title: 'JAAFAR',
-    type: 'Album • Rounhaa',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
-    title: 'Henri Bleu',
-    type: 'Artiste',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
-    title: 'OG SAN 1',
-    type: 'Album • Deen Burbigo',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
-    title: 'Deadly Poison Sting',
-    type: 'Album • baby hayabusa',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
-    title: 'Bémol',
-    type: 'Album • Kaozed',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
-    title: 'Henri Bleu',
-    type: 'Artiste',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab6761610000101f559d3b7288ac297cce4bfe86',
-    title: 'Henri Bleu',
-    type: 'Artiste',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eb2b3a9c113ffedc4087244f58',
-    title: 'OG SAN 1',
-    type: 'Album • Deen Burbigo',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011ebaeb44e431e6792e8c79f71f5',
-    title: 'Deadly Poison Sting',
-    type: 'Album • baby hayabusa',
-    isPinned: false,
-  },
-  {
-    src: 'https://i.scdn.co/image/ab67616d000011eb45e8071ae72b45fd5df11029',
-    title: 'Bémol',
-    type: 'Album • Kaozed',
-    isPinned: false,
-  },
-]
-
-export const FooterLinks = [
-  {
-    title: 'Company',
-    links: [
-      { name: 'About', link: '#' },
-      { name: 'Jobs', link: '#' },
-      { name: 'For the Record', link: '#' },
-    ],
-  },
-  {
-    title: 'Communities',
-    links: [
-      { name: 'For Artists', link: '#' },
-      { name: 'Developers', link: '#' },
-      { name: 'Advertising', link: '#' },
-      { name: 'Investors', link: '#' },
-      { name: 'Vendors', link: '#' },
-    ],
-  },
-  {
-    title: 'Useful links',
-    links: [
-      { name: 'Support', link: '#' },
-      { name: 'Free Mobile App', link: '#' },
-    ],
-  },
-  {
-    title: 'Spotify Plans',
-    links: [
-      { name: 'Premium Individual', link: '#' },
-      { name: 'Premium Duo', link: '#' },
-      { name: 'Premium Family', link: '#' },
-      { name: 'Premium Student', link: '#' },
-      { name: 'Spotify Free', link: '#' },
-    ],
-  },
-]
-
-export const browseList = [
+export const browseList: MusicGenre[] = [
   {
     imageURL:
       'https://i.scdn.co/image/ab67fb8200005caf474a477debc822a3a45c5acb',

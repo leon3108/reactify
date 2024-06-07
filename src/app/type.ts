@@ -1,5 +1,15 @@
 import { StaticImageData } from "next/image";
 
+export interface Link {
+  name:string,
+  url:string
+}
+
+export interface GroupLinks {
+  title: string,
+  links: Link[],
+}
+
 export interface PlaylistItem {
   src:string | StaticImageData,
   title: string,
@@ -7,14 +17,9 @@ export interface PlaylistItem {
   artist: string,  
 }
 
-export interface Playlist {
+export interface PlaylistCollection {
   name: string,
   items: PlaylistItem[],
-}
-
-export interface Link {
-  name:string,
-  url:string
 }
 
 export interface Song {
@@ -22,7 +27,15 @@ export interface Song {
   artistName: string
   songName: string
 }
+
 export interface Item {
-  src: string | StaticImageData
-  title: string
+  imageUrl: string | StaticImageData
+  title: string,
+  description?: string,
+  isPinned?: boolean,
+}
+export interface MusicGenre {
+  imageURL: string,
+  name: string,
+  color: string,
 }

@@ -16,16 +16,16 @@ import Image, { StaticImageData } from 'next/image'
 import { ImperativePanelHandle } from 'react-resizable-panels'
 
 function LibraryItem({
-  src,
+  imageUrl,
   title,
-  type,
+  description,
   isPinned,
   panelRef,
 }: {
-  src: string | StaticImageData
+  imageUrl: string | StaticImageData
   title: string
-  type: string
-  isPinned: boolean
+  description?: string
+  isPinned?: boolean
   panelRef: React.RefObject<ImperativePanelHandle>
 }) {
   return (
@@ -39,7 +39,7 @@ function LibraryItem({
         )}
       >
         <Image
-          src={src}
+          src={imageUrl}
           alt={title}
           width={48}
           height={48}
@@ -57,7 +57,7 @@ function LibraryItem({
           <p>{title}</p>
           <div className="flex">
             {isPinned && <Pin className=" fill-spotify stroke-spotify" />}
-            <p className="truncate text-sm text-subdued">{type}</p>
+            <p className="truncate text-sm text-subdued">{description}</p>
           </div>
         </div>
       </ContextMenuTrigger>
@@ -101,14 +101,7 @@ export default function LibraryList({
     <section className="flex flex-col space-y-2 overflow-hidden">
       <ScrollArea>
         {sidebarList.map((item, index) => (
-          <LibraryItem
-            key={index}
-            src={item.src}
-            title={item.title}
-            type={item.type}
-            isPinned={item.isPinned}
-            panelRef={panelRef}
-          />
+          <LibraryItem key={index} {...item} panelRef={panelRef} />
         ))}
       </ScrollArea>
     </section>

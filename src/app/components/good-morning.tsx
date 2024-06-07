@@ -10,7 +10,7 @@ export default function GoodMorning() {
       )}
     >
       {RecentsListeninglist.map((item) => (
-        <RecentsListening title={item.title} src={item.src} key={item.title} />
+        <RecentsListening {...item} key={item.title} />
       ))}
     </section>
   )
