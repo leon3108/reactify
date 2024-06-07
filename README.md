@@ -53,8 +53,8 @@ player.tsx audioRef.current mettre dans un state ?
 
 mettre toutes les "fakes" données provenant de serveur dans un dossier data
 
-libraryList changer contextMenuTrigger
-panelRef.current passer en const, pareil dans menu.tsx
+~~libraryList changer contextMenuTrigger~~
+~~panelRef.current passer en const, pareil dans menu.tsx~~
 
 ~~changer images.domains~~
 

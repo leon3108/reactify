@@ -28,14 +28,14 @@ function LibraryItem({
   isPinned?: boolean
   panelRef: React.RefObject<ImperativePanelHandle>
 }) {
+  const panelSizeBiggerThanSmall =
+    panelRef.current?.getSize()! > PANEL_SIZE.small
   return (
     <ContextMenu>
       <ContextMenuTrigger
         className={cn(
           'flex space-x-2 rounded-lg p-2 hover:bg-[#1a1a1a]',
-          panelRef.current?.getSize()! > PANEL_SIZE.small
-            ? ''
-            : 'justify-center',
+          panelSizeBiggerThanSmall ? '' : 'justify-center',
         )}
       >
         <Image
@@ -45,13 +45,13 @@ function LibraryItem({
           height={48}
           className={cn(
             'rounded-md ',
-            panelRef.current?.getSize()! > PANEL_SIZE.small ? '' : 'h-12 w-12',
+            panelSizeBiggerThanSmall ? '' : 'h-12 w-12',
           )}
         />
         <div
           className={cn(
             'flex flex-col',
-            panelRef.current?.getSize()! > PANEL_SIZE.small ? '' : 'hidden',
+            panelSizeBiggerThanSmall ? '' : 'hidden',
           )}
         >
           <p>{title}</p>
