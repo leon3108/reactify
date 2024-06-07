@@ -75,5 +75,3 @@ If needed, I use Vercel to deploy the app and Neon to deploy db
 # To do
 
 player.logic.ts audioRef.current mettre dans un state/const ?
-
-cursor-pointer
