@@ -74,10 +74,6 @@ If needed, I use Vercel to deploy the app and Neon to deploy db
 
 # To do
 
-player.tsx voir comment changer le js, mettre dans un hook, fichier ?
-
 player.tsx audioRef.current mettre dans un state ?
 
 cursor-pointer
-
-recommendations.tsx extraire les composants

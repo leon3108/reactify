@@ -6,7 +6,7 @@ import { Search } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import Footer from '../common/footer/footer'
 import Navbar from '../common/navbar'
-import Browse from './components/browse'
+import Browse from './components/browse/browse'
 import RecentsSearches from './components/recents-searches'
 
 export default function Home() {

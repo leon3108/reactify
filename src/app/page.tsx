@@ -2,11 +2,11 @@
 
 import { ScrollArea } from '@/ui/scroll-area'
 import Footer from './common/footer/footer'
-import usePreventSpaceScroll from './common/hooks/use-prevent-space-scroll'
 import Navbar from './common/navbar'
 import Filter from './components/filter'
 import GoodMorning from './components/good-morning'
 import Recommendations from './components/recommendations/recommendations'
+import usePreventSpaceScroll from './page.logic'
 
 export default function Home() {
   usePreventSpaceScroll()
