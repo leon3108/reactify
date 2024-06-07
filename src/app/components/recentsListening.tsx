@@ -6,10 +6,10 @@ import { useContext } from 'react'
 import { CurrentSongContext } from '../common/context/current-song'
 
 export default function RecentsListening({
-  description,
+  title,
   imageUrl,
 }: {
-  description?: string
+  title: string
   imageUrl: string | StaticImageData
 }) {
   const currentSongContext = useContext(CurrentSongContext)
@@ -18,7 +18,7 @@ export default function RecentsListening({
     currentSongContext.setCurrentSong({
       imageUrl: imageUrl,
       artistName: '',
-      songName: description!,
+      songName: title!,
     })
   }
   return (
@@ -30,7 +30,7 @@ export default function RecentsListening({
         width={80}
         height={80}
       />
-      <p className="flex w-5/6 flex-grow">{description}</p>
+      <p className="flex w-5/6 flex-grow">{title}</p>
       <div className="absolute right-4 h-12 w-12 rounded-full bg-spotify p-2 opacity-0 group-hover:opacity-100">
         <Play
           className="h-8 w-8 fill-black-500 stroke-black-500 p-2"
