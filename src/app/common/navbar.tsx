@@ -1,27 +1,14 @@
-'use client'
-
 import { Avatar, AvatarFallback, AvatarImage } from '@/ui/avatar'
 import { Button } from '@/ui/button'
-import { Input } from '@/ui/input'
 import {
   ArrowDownFromLine,
   Bell,
   ChevronLeft,
   ChevronRight,
-  Search,
 } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { ReactNode } from 'react'
 
-export default function Navbar({ path }: { path: string }) {
-  const [inputText, setinputText] = useState('')
-  const inputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus()
-    }
-  }, [])
-
+export default function Navbar({ children }: { children?: ReactNode }) {
   return (
     <nav className="flex h-12 w-full items-center justify-between">
       <div className="flex items-center space-x-2">
@@ -31,17 +18,7 @@ export default function Navbar({ path }: { path: string }) {
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0000008a]">
           <ChevronRight className="stroke-[#b3b3b3]" />
         </div>
-        {path == 'search' && (
-          <Input
-            ref={inputRef}
-            className="w-96"
-            placeholder="What do you want to play?"
-            icon={<Search className="stroke-[#b3b3b3]" size={20} />}
-            onChange={(e) => setinputText(e.target.value)}
-            value={inputText}
-            setValue={setinputText}
-          />
-        )}
+        {children}
       </div>
       <div className="flex items-center space-x-1">
         <Button className="rounded-3xl font-bold">Explore Premium</Button>
