@@ -1,4 +1,4 @@
-import { RecentsSearchesList } from '@/app/const'
+import { RecentsSearchesList } from '@/app/data'
 import Image from 'next/image'
 
 export default function RecentsSearches() {

@@ -11,6 +11,7 @@ import {
   SkipForward,
 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import useSpaceKeyHandler from '../hooks/use-space-key-handler'
 
 export default function Player({ volume }: { volume: number }) {
   const [currentTime, setCurrentTime] = useState(0)
@@ -34,20 +35,6 @@ export default function Player({ volume }: { volume: number }) {
     }
   }, [])
 
-  useEffect(() => {
-    const handleKeyDown = (event: { key: string }) => {
-      if (event.key === ' ') {
-        playPause()
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown)
-    }
-  })
-
   const handleTimeUpdate = () => {
     if (audioUrl) {
       const audio = audioRef.current
@@ -68,6 +55,8 @@ export default function Player({ volume }: { volume: number }) {
     }
     setIsPlaying(!isPlaying)
   }
+
+  useSpaceKeyHandler(playPause)
 
   const handleValueChange = (value: number[]) => {
     if (audioUrl) {
