@@ -1,4 +1,5 @@
-import { PANEL_SIZE, sidebarList } from '@/app/const'
+import { PANEL_SIZE } from '@/app/const'
+import { sidebarList } from '@/app/data'
 import { cn } from '@/lib/utils'
 import {
   ContextMenu,

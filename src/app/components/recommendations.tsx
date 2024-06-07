@@ -6,7 +6,7 @@ import { Play } from 'lucide-react'
 import Image from 'next/image'
 import { useContext } from 'react'
 import { CurrentSongContext } from '../common/context/current-song'
-import { RecommendationsList } from '../const'
+import { RecommendationsList } from '../data'
 import { PlaylistItem } from '../type'
 
 function Item({ src, title, description, artist }: PlaylistItem) {

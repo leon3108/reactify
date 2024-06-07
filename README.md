@@ -41,21 +41,12 @@ pnpm run dev
 
 element dans une liste à séparer dans un fichier
 
-~~page.tsx navbar; children pour afficher l'input ?~~
-
 handleKeywdown créer un custom Hook pour play/Pause
 
 player.tsx audioRef.current mettre dans un state ?
 
-~~volume.tsx rename volume ~~
-
-~~const.ts typer sidebarlist~~
-
 mettre toutes les "fakes" données provenant de serveur dans un dossier data
 
-~~libraryList changer contextMenuTrigger~~
-~~panelRef.current passer en const, pareil dans menu.tsx~~
-
-~~changer images.domains~~
-
 cursor-pointer
+
+recommendations.tsx extraire les composants
