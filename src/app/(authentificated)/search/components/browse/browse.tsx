@@ -1,4 +1,4 @@
-import { browseList } from '@/app/const'
+import { browseList } from '@/app/(authentificated)/const'
 import GridItem from './grid-item'
 
 export default function Browse() {

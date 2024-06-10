@@ -1,4 +1,4 @@
-import { sidebarList } from '@/app/data'
+import { sidebarList } from '@/app/(authentificated)/data'
 import { ScrollArea } from '@/ui/scroll-area'
 import { ImperativePanelHandle } from 'react-resizable-panels'
 import LibraryItem from './library-item'

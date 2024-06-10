@@ -1,4 +1,4 @@
-import { ICON_SIZE, TEXT_GRAY_500 } from '@/app/const'
+import { ICON_SIZE, TEXT_GRAY_500 } from '@/app/(authentificated)/const'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReactElement, cloneElement } from 'react'

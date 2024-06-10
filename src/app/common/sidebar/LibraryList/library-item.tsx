@@ -1,4 +1,4 @@
-import { PANEL_SIZE } from '@/app/const'
+import { PANEL_SIZE } from '@/app/(authentificated)/const'
 import { cn } from '@/lib/utils'
 import {
   ContextMenu,

@@ -1,4 +1,4 @@
-import { Song } from '@/app/type'
+import { Song } from '@/app/(authentificated)/type'
 import { createContext } from 'react'
 
 export interface CurrentSongContextProps {

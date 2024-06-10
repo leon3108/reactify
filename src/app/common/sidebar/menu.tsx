@@ -1,4 +1,4 @@
-import { MenuList, PANEL_SIZE } from '@/app/const'
+import { MenuList, PANEL_SIZE } from '@/app/(authentificated)/const'
 import { cn } from '@/lib/utils'
 import { Card, CardContent } from '@/ui/card'
 import React from 'react'

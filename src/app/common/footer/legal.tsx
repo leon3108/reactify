@@ -1,4 +1,4 @@
-import { LegalList } from '@/app/const'
+import { LegalList } from '@/app/(authentificated)/const'
 
 export default function Legal() {
   return (

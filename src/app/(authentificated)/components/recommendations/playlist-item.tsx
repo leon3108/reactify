@@ -4,7 +4,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from '@/ui/card'
 import { Play } from 'lucide-react'
 import Image from 'next/image'
 import { useContext } from 'react'
-import { CurrentSongContext } from '../../common/context/current-song'
+import { CurrentSongContext } from '../../../common/context/current-song'
 import { PlaylistItemType } from '../../type'
 
 export default function PlaylistItem({

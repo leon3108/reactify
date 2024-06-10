@@ -1,4 +1,4 @@
-import { ICON_SIZE, PANEL_SIZE } from '@/app/const'
+import { ICON_SIZE, PANEL_SIZE } from '@/app/(authentificated)/const'
 import { cn } from '@/lib/utils'
 import {
   ContextMenu,
@@ -64,10 +64,10 @@ export default function Title({
       </ContextMenu>
       {showText ? (
         <div className="flex items-center space-x-3">
-          <div className="hover:bg-black-900 flex h-8 w-8 items-center justify-center rounded-full">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full hover:bg-black-900">
             <Plus className="cursor-pointer stroke-grey-500" />
           </div>
-          <div className="hover:bg-black-900 flex h-8 w-8 items-center justify-center rounded-full">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full hover:bg-black-900">
             {arrow}
           </div>
         </div>

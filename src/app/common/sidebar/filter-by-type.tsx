@@ -1,4 +1,4 @@
-import { MusicType } from '@/app/const'
+import { MusicType } from '@/app/(authentificated)/const'
 import { Badge } from '@/ui/badge'
 
 export default function FilterByType({}: {}) {

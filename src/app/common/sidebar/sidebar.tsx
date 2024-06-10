@@ -1,6 +1,6 @@
 'use client'
 
-import { PANEL_SIZE } from '@/app/const'
+import { PANEL_SIZE } from '@/app/(authentificated)/const'
 import { ResizablePanel } from '@/ui/resizable'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import { useRef, useState } from 'react'

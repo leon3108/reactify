@@ -1,6 +1,7 @@
+import { ThemeProvider } from '@/app/(authentificated)/theme-provider'
 import PlayerBar from '@/app/common/playerBar/player-bar'
 import SideBar from '@/app/common/sidebar/sidebar'
-import { ThemeProvider } from '@/app/theme-provider'
+import '@/app/globals.css'
 import {
   ResizableHandle,
   ResizablePanel,
@@ -9,7 +10,6 @@ import {
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { CurrentSongProvider } from './current-song-provider'
-import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

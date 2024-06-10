@@ -1,4 +1,4 @@
-import { RecentsSearchesList } from '@/app/data'
+import { RecentsSearchesList } from '@/app/(authentificated)/data'
 import Image from 'next/image'
 
 export default function RecentsSearches() {
